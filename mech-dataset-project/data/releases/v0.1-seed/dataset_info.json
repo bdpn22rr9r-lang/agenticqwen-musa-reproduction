@@ -1,0 +1,10 @@
+{
+  "mech_sft_v0_1-seed": {
+    "file_name": "train_alpaca.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

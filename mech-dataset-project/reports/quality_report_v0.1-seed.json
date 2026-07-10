@@ -1,0 +1,99 @@
+{
+  "version": "v0.1-seed",
+  "release_dir": "data/releases/v0.1-seed",
+  "totals": {
+    "train": 159,
+    "validation": 16,
+    "test": 13,
+    "challenge": 3
+  },
+  "overall_total": 191,
+  "distribution": {
+    "by_task_type": {
+      "design_review": 48,
+      "fault_diagnosis": 22,
+      "engineering_calculation": 3,
+      "fatigue_failure": 19,
+      "fea_interpretation": 2,
+      "context_extraction": 51,
+      "material_heat_treatment": 3,
+      "info_insufficient": 3,
+      "tool_awareness": 2,
+      "basic_concept": 2,
+      "material_evidence": 8,
+      "process_planning": 20,
+      "safety_boundary": 8
+    },
+    "by_domain": {
+      "shaft": 74,
+      "weldment": 8,
+      "bolted_joint": 9,
+      "gear": 6,
+      "hydraulic_seal": 6,
+      "general": 80,
+      "beam_plate": 4,
+      "bearing": 2,
+      "spring_coupling": 2
+    },
+    "by_source_type": {
+      "v1v2_migrated": 80,
+      "expert_constructed": 29,
+      "mechqa_converted": 50,
+      "model_generated": 32
+    },
+    "by_review_status": {
+      "seed_pending_review": 159,
+      "model_generated": 32
+    },
+    "by_difficulty": {
+      "hard": 27,
+      "medium": 162,
+      "easy": 2
+    }
+  },
+  "per_split_quality": {
+    "train": {
+      "total": 159,
+      "schema_invalid": 0,
+      "schema_valid_rate": 1.0,
+      "empty_output": 0,
+      "duplicate_id": 0,
+      "unsourced_numeric": 0,
+      "forbidden_pattern": 0
+    },
+    "validation": {
+      "total": 16,
+      "schema_invalid": 0,
+      "schema_valid_rate": 1.0,
+      "empty_output": 0,
+      "duplicate_id": 0,
+      "unsourced_numeric": 0,
+      "forbidden_pattern": 0
+    },
+    "test": {
+      "total": 13,
+      "schema_invalid": 0,
+      "schema_valid_rate": 1.0,
+      "empty_output": 0,
+      "duplicate_id": 0,
+      "unsourced_numeric": 0,
+      "forbidden_pattern": 0
+    },
+    "challenge": {
+      "total": 3,
+      "schema_invalid": 0,
+      "schema_valid_rate": 1.0,
+      "empty_output": 0,
+      "duplicate_id": 0,
+      "unsourced_numeric": 0,
+      "forbidden_pattern": 0
+    }
+  },
+  "plan_targets_check": {
+    "json_schema_valid_rate_100pct": true,
+    "empty_output_zero": true,
+    "duplicate_id_zero": true,
+    "note": "近似重复/泄漏由独立 check 脚本检查; MechQA 类噪声需人工核验(review_status!=expert_approved)。"
+  },
+  "honesty_note": "所有样本 review_status 应为 seed_pending_review/model_generated, 未经真人机械工程师 A 级审核,不得用于正式训练/产品。"
+}

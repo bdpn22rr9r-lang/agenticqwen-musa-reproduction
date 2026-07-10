@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# mech-dataset-project: 第三方原始数据(可重新 clone, 不入库以控制仓库体积)
+# 已转换的 data/converted/ 与自产 data/generated/ 仍入库
+mech-dataset-project/data/raw/mechqa/
+
+# 流水线中间产物
+mech-dataset-project/data/releases/*/_pool.jsonl
+
+# 模型权重/训练输出(不入库)
+*.safetensors
+*.bin
+*.ckpt
+*.pt
+outputs/
+checkpoints/
+
+# IDE/系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

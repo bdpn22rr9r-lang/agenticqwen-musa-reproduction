@@ -1,0 +1,67 @@
+[
+  {
+    "instruction": "你是一名工程计算工程师。请说明螺栓预紧与剩余预紧的校核。",
+    "input": "已知:螺栓承受工作拉力 F=10 kN,要求残余预紧力不小于工作拉力的 0.5 倍。请说明如何确定所需预紧力并校核螺栓总拉力。",
+    "output": "已知:工作拉力 F=10 kN,要求残余预紧力 F''≥0.5F=5 kN。\n1. 相对刚度法:螺栓总拉力 F0=F''+F×(螺栓刚度相对总刚度之比)。常用近似:若被连接件刚度远大于螺栓,外载主要由被连接件承担,F0≈F''+F。\n2. 所需预紧力:为保证 F''≥5 kN,需施加预紧力 F'=F''+(1-相对刚度比)×F;具体需知道螺栓与被连接件刚度比。\n3. 校核:螺栓总拉力产生的应力应低于许用应力;应力幅(与载荷变幅有关)决定疲劳寿命。\n4. 假设:弹性范围内、连接不分离、刚度已知。\n5. 缺失信息:螺栓规格、刚度比、强度等级、载荷是否交变。需结合标准与刚度数据(requires_rag)。"
+  },
+  {
+    "instruction": "你是一名机械工程助手。判断该问题是否需要调用计算工具。",
+    "input": "问题:复杂薄壁结构在工作载荷下的应力分布与稳定性如何?",
+    "output": "该问题应调用有限元(FEA)等计算工具,难以用解析法准确求解。\n原因:复杂薄壁结构的应力分布、局部稳定性与屈曲行为依赖几何细节、边界条件与载荷路径,解析公式只能给出近似,工程决策需 FEA。\n建议:建立合理的 FEA 模型(注意网格收敛、边界条件、单元类型),对关键区域做应力提取与稳定性校核;FEA 结果仍需结合工程判断与规范。此问题应走计算工具。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the youngs modulus of Pearlite?\n文献片段(英文原文,作证据):The commercial code ABAQUS was used to perform the analysis. Equations (4–8) describe the elastic-plastic behavior of pearlite and ferrite, with E = 200 GPa and ν = 0.3. Fig. 6 shows the axisymmetric one-particle and two particle idealizations in which there is a dispersion of small and/or small and large particles of pearlite in a ferrite matrix. Symmetry is used to arrive to Fig. 6 from Fig. 5 in each case. Referring to Fig. 6, pearlite volume fraction for single particle and double particle models are computed as 2/3a3/L3 and 2(a3 + b3)/3(L2H) respectively. The loading condition which is experienced by the material when loaded uniaxially is manifested in the boundary conditions applied to the unit cell model. The microstructure experiences far field applied displacement exerted on the macro-scale, which can be assumed uniform on the micro-level. To simulate this condition, a uniform displacement boundary condition is used on the top part of the model (side S4). The RVE is maintained circular throughout the analysis to simulate the influence of the neighboring particles using the equation command in ABAQUS. Mathematically, the boundary conditions for axisymmetric unit cell can be described as:\nDOI:10.1016/j.msea.2010.07.045",
+    "output": "依据文献片段,所提取的性能为:200 GPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2010.07.045。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 249.8 MPa for S4WA2?\n文献片段(英文原文,作证据):The three alloys showed the same trend regarding their response to the strengthening process. As these alloys reached their highest strength with the T6 heat treatment, in using the T7 treatment, viz., increasing the aging temperature and time, they were overaged, so that the strength decreased and the ductility increased, as explained above in detail. For example, for alloy B, the UTS, YS, and %El values in the as-cast condition are 249.8 MPa, 166.9 MPa, and 3.7%, respectively. With T6 heat treatment, specifically S4WA2, the alloy achieved its highest strength with 373.7 MPa UTS, 304.2 MPa YS, and ductility of 2.7%. Whereas after the T7 heat treatments (S4WA3 and S4WA4), the alloy started to soften and exhibit lower strength values and higher ductility. At ambient temperature, and with solution heat treatment for 4 h, alloy B gave the highest strength values with the S4WA2 heat treatment.\nDOI:10.1007/s13632-019-00583-8_",
+    "output": "依据文献片段,所提取的性能为:UTS。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1007/s13632-019-00583-8_。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 248 MPa for AXM070305?\n文献片段(英文原文,作证据):A dilute Mg-0.68Al-0.32Ca-0.50Mn (AXM070305, wt%) magnesium (Mg) alloy with high strength and excellent ductility was developed by extrusion and subsequent T6 heat treatment. The alloy exhibits a yield strength (YS) of 248 MPa, ultimate tensile strength (UTS) of 288 MPa and elongation to failure (EL) of 21.0%, after T6 peak-aged treatment. The high strength is mainly attributed to the presence of high number density of nanosized β-Mn precipitates, a large number of mono-layered Guinier-Preston (G.P.) zones and planar Al2Ca phase. The excellent ductility is mainly due to the fully recrystallized fine grains with weak basal texture. The peak microhardness of this alloy was reached 67.9 HV after aging at 200 °C for 16 h, due to the precipitation of mono-layered G.P. zone, nanosized particle β-Mn phase and planar Al2Ca phase.\nDOI:10.1016/j.matchar.2020.110197",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.matchar.2020.110197。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 263 MPa for AISI 316L?\n文献片段(英文原文,作证据):Yield strength and tensile strength of dissimilar welds of AISI 316L and AISI 409M at different weld parameters are shown in Table 6. It is also observed that for dissimilar welds, the tensile strength increases with increase in root gap and notch angle. From Fig. 5b, and Table 6 for dissimilar weld of AISI 316L and AISI 409M, tensile strength is maximum at 2 mm root gap and 60° notch angle i.e. 263 MPa.\nDOI:10.1016/j.matpr.2019.09.018",
+    "output": "依据文献片段,所提取的性能为:tensile strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.matpr.2019.09.018。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 4.39 ± 0.4% for TiC?\n文献片段(英文原文,作证据):The mechanical properties in term of ultimate tensile strength (UTS), yield strength (YS), tensile strain (El), fracture toughness (KΙC) and Vicker's hardness (Hv) of the TiC-γ′/Ni composites after different thermal treatment condition are compared in Table 3. In this work, the S-samples exhibit superior mechanical properties than the A-samples. The following thermal treatment procedures certainly optimize the microstructure and contribute to the enhancement of properties. As for the composite fabricated at 1400 °C (A0), in comparison, the composites after annealing exhibit superior mechanical properties. The yield strengths of samples after annealing at 750 °C for 20, 50 and 100 h were about 675 ± 45(A1), 730 ± 39(A2) and 736 ± 41 MPa (A3), respectively. Correspondingly, the ultimate tensile strength of samples tended to be 808 ± 11, 850 ± 16 and 864 ± 33 MPa, whilst the tensile elongation were kept at about 4.46 ± 0.32, 4.51 ± 0.29 and 4.39 ± 0.4%, illustrating the ductility is less sensitive to the annealing time. However, as for S-samples, the yield strengths of S0 samples can be reached to 1078 ± 59 MPa with about 7.72 ± 0.52% ductility. After solid solution treatment and subsequent annealing at 750 °C for 20, 50 and 100 h, the yield strengths were about 1230 ± 25, 1239 ± 15 and 1217 ± 29 MPa, respectively. The tensile elongation were correspondingly determined to be about 6.45 ± 0.6%, 6.27 ± 0.48% and 5.84 ± 0.35%.\nDOI:10.1016/j.jallcom.2018.10.053",
+    "output": "依据文献片段,所提取的性能为:ductility。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2018.10.053。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a ultimate tensile strength of 39.75 MPa?\n文献片段(英文原文,作证据):The mechanical properties of the laminates of 40 vol.% BVF with different numbers of laminae are plotted in Fig. 5. As seen from Fig. 5 the mechanical properties of the composites increased with the increasing number of fibre laminae until the number reached 4. With further increase in the fibre laminae number to 5, the mechanical properties of the composites decreased. The tensile modulus and strength of the laminates with 40 vol.% BVF increased by 62% and 98%, respectively, as the fibre laminae number was increased to 4. The increased tensile properties indicated an increase in λ, which could be attributed to an increase in Vfb, as a linear pattern was observed: b(BVF40-2) = 0.14*2/aλ0, b(BVF40-3) = 0.14*3/aλ0, and b(BVF40-4) = 0.14*4/aλ0. Therefore, b∝nVf, where n is the number of fibre laminae. This finding corelated well with the result reportedby Prambauer et al. (2016). However, the tensile strength decreased to 39.75 MPa as the number of fibre laminae increased to five, while the tensile modulus of BF40-5 was not significantly different from that of BVF40-4. This implied the existence of a certain saturation point. Similar trends were also observed for the flexural and impact properties. The flexural modulus, flexural strength and impact strength of BVF40-4 were 140%, 80% and 122% higher than those of BF40-1, respectively. Whereas, the flexural modulus, flexural strength and impact strength of BF40-5 were reduced by 9%, 21% and 21% as the number of fibre mats were increased from 4 to 5.\nDOI:10.1016/j.indcrop.2018.05.025",
+    "output": "依据文献片段,所提取的性能为:BF40-5。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.indcrop.2018.05.025。"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：渗氮轴。要求：38CrMoAl，轴颈要求高硬度低变形。",
+    "output": "建议工艺路线：\n1. 锻造和退火\n2. 粗车\n3. 调质\n4. 半精车并留磨量\n5. 去应力处理\n6. 精磨前加工\n7. 渗氮后轻磨或抛光并检验层深硬度"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：冷冲压支架。要求：低碳钢板，中批量，多处折弯孔。",
+    "output": "建议工艺路线：\n1. 展开和排样\n2. 落料冲孔\n3. 去毛刺\n4. 分步折弯成形\n5. 整形\n6. 表面处理\n7. 检验孔位、角度和轮廓尺寸"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：高精度平板。要求：铸铁，要求高平面度和稳定性。",
+    "output": "建议工艺路线：\n1. 铸造及清砂\n2. 充分时效\n3. 粗刨或粗铣\n4. 二次时效\n5. 半精加工\n6. 精刨或磨削\n7. 研刮并按网格测量平面度"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：液压阀块。要求：多交叉孔且清洁度要求高。",
+    "output": "建议工艺路线：\n1. 毛坯检查和基准加工\n2. 加工主孔和安装面\n3. 钻铰交叉油孔\n4. 去除交叉孔毛刺\n5. 精加工阀孔\n6. 超声或高压清洗\n7. 压力、泄漏和清洁度检验"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：陶瓷密封环。要求：脆性材料，端面平面度要求高。",
+    "output": "建议工艺路线：\n1. 粉体配制和成形\n2. 烧结\n3. 粗磨内外圆\n4. 精磨端面\n5. 研磨和抛光\n6. 清洗\n7. 检验裂纹、平面度、平行度和粗糙度"
+  }
+]

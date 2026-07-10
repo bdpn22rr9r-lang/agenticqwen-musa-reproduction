@@ -1,0 +1,82 @@
+[
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：带传动。现状：小带轮包角不足，初拉力未定义。",
+    "output": "审查意见：\n1. 校核包角、有效拉力和打滑裕量\n2. 设置张紧装置并规定初拉力\n3. 检查轴和轴承的径向载荷\n4. 配置防护罩及维护空间"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：丝杠升降机构。现状：垂直负载可能失电下落，仅依赖电机制动。",
+    "output": "审查意见：\n1. 增加机械自锁或独立防坠装置\n2. 校核丝杠压杆稳定性与临界转速\n3. 设置上下限位和过载保护\n4. 明确润滑、磨损检查及安全系数"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：起吊耳板。现状：吊耳开孔靠近板边，未标材料方向和探伤。",
+    "output": "审查意见：\n1. 校核净截面、孔边承压及撕裂\n2. 检查偏载和面外弯曲\n3. 明确材料、焊缝和无损检测\n4. 进行额定载荷试验并设置永久标识"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：液压缸活塞杆。现状：表面镀层和密封配合段粗糙度未定义。",
+    "output": "审查意见：\n1. 校核屈曲、疲劳和连接螺纹\n2. 规定镀层厚度、硬度及结合质量\n3. 明确密封段粗糙度和直线度\n4. 检查导向长度、偏载和防尘结构"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：蜗杆减速器。现状：连续工作且传动比大，未进行热平衡校核。",
+    "output": "审查意见：\n1. 计算啮合效率和热功率\n2. 校核齿面接触强度和胶合风险\n3. 选择润滑油粘度及供油方式\n4. 增加散热措施并规定温升限值"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：电机轴系。现象：联轴器附近二倍转频振动突出。",
+    "output": "可能原因：\n1. 角向不对中\n2. 轴弯曲\n3. 联轴器装配误差\n4. 结构松动\n排查与处置：\n1. 采集轴向和径向振动相位\n2. 冷热态对中比较\n3. 测轴跳动和联轴器端面跳动\n4. 校中后复测振动"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：主轴系统。现象：加工表面出现周期振纹。",
+    "output": "可能原因：\n1. 主轴轴承预紧异常\n2. 刀具不平衡或伸出过长\n3. 切削参数激发颤振\n4. 连接刚度不足\n排查与处置：\n1. 空转测试主轴振动\n2. 检查刀柄刀具跳动和平衡\n3. 改变转速识别稳定区\n4. 检查轴承温升和连接面"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：往复机构。现象：换向位置冲击并有金属敲击声。",
+    "output": "可能原因：\n1. 间隙增大\n2. 缓冲失效\n3. 连杆或销轴磨损\n4. 控制时序不当\n排查与处置：\n1. 低速点动定位声源\n2. 测量销轴衬套间隙\n3. 检查缓冲元件\n4. 核对换向时序和紧固状态"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：锅炉给水泵。现象：轴向位移缓慢增大。",
+    "output": "可能原因：\n1. 平衡装置磨损\n2. 推力轴承损伤\n3. 叶轮结垢导致轴向力变化\n4. 工况偏离设计点\n排查与处置：\n1. 核对轴向位移和推力瓦温度\n2. 检查流量扬程工况\n3. 分析润滑油磨粒\n4. 停机检查平衡盘和推力轴承"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：液压泵。现象：油温升高且噪声呈宽带增强。",
+    "output": "可能原因：\n1. 吸油不足产生气穴\n2. 油液粘度不合适\n3. 内部磨损泄漏\n4. 滤芯堵塞\n排查与处置：\n1. 检查吸油真空度和油位\n2. 核对油温粘度\n3. 测容积效率和壳体泄油\n4. 更换滤芯并检查磨损颗粒"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of g-PEGM?\n文献片段(英文原文,作证据):The mechanical properties of SPEs are very important for the safety of batteries. Fig. 2c shows stress-strain curves of BC-g-PEGM-GPEs and its control sample (i.e. BC/PEGM mixture-based GPEs, denoted as BC/PEGM-GPEs). For BC/PEGM-GPEs, the tensile strength, Young's modulus, and toughness are as low as 0.2 MPa, 1.9 MPa, and 15.1 KJ/m3, respectively. In sharp constrast, the tensile strength and Young's modulus of BC-g-PEGM-GPEs are up to 2.0 MPa and 5.0 MPa, respectively. More importantly, the toughness of BC-g-PEGM-GPEs (316.7 KJ/m3) is 21 times as high as that of BC/PEGM-GPEs. Table S1 shows that when comparing the mechanical properties of BC-g-PEGM-GPEs to other reported SPEs, BC-g-PEGM-GPEs exhibit impressive tensile strength and Young's modulus. The results indicate BC-g-PEGM bottlebrushes provide superior mechanical properties to GPEs as compared to the conventional filler-containing GPEs (e.g. BC/PEGM-GPEs). This could be because the grafted PEGM side chains of BC-g-PEGM contain numerous homogeneously distributed diethylene glycol methyl ether groups that have a good affinity to the poly(ethylene glycol)-containing gel electrolyte. As a result, BC-g-PEGM bottlebrushes present a good interfacial compatibility with gel electrolytes and thus demonstrate superior mechanical properties.\nDOI:10.1016/j.mtnano.2021.100128",
+    "output": "依据文献片段,所提取的性能为:5.0 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.mtnano.2021.100128。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a youngs modulus of 277 ± 9 GPa?\n文献片段(英文原文,作证据):In this work, ellipsometry, Brillouin spectroscopy and nanoindentation are combined to assess the mechanical properties of a nanocrystalline Al2O3/a-Al2O3 composite coating with high accuracy and precision. The nanocomposite is grown by pulsed laser deposition at either room temperature or 600 °C. The adhesive strength is evaluated by nanoscratch tests. In the room temperature process the coating attains an unusual combination of compactness, strong interfacial bonding, moderate stiffness (E = 195 ± 9 GPa and ν = 0.29 ± 0.02) and significant hardness (H = 10 ± 1 GPa), resulting in superior plastic behavior and a relatively high ratio of hardness to elastic modulus (H/E = 0.049). These features are correlated to the nanostructure of the coating, which comprises a regular dispersion of ultrafine crystalline Al2O3 nanodomains (2–5 nm) in a dense and amorphous alumina matrix, as revealed by transmission electron microscopy. For the coating grown at 600 °C, strong adhesion is also observed, with an increase of stiffness and a significant enhancement of hardness (E = 277 ± 9 GPa, ν = 0.27 ± 0.02 and H = 25 ± 1 GPa), suggesting an outstanding resistance to wear (H/E = 0.091).\nDOI:10.1016/j.actamat.2013.01.050",
+    "output": "依据文献片段,所提取的性能为:Al2O3。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.actamat.2013.01.050。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of Cu40Zn?\n文献片段(英文原文,作证据):The effect of titanium addition on the microstructure and mechanical properties of brass Cu40Zn has been studied via the powder metallurgy (P/M) route. The water-atomized Cu40Zn–1.0 wt% Ti alloy powder was consolidated at different temperatures in the range of 400–600 °C using spark plasma sintering (SPS) and hot extrusion subsequently. Results show that the super-saturated solid solution titanium element in rapidly cooled brass Cu40Zn powder created high chemical potential for a precipitate reaction, showing significant grain refinement effects on the consolidated Cu40Zn matrix. Consequently, excellent mechanical properties were obtained by precipitation hardening and work hardening after sintering and extrusion, with yield strength of 390 MPa, ultimate tensile strength of 617 MPa, and Vickers micro-hardness of 192 HV, which are 28.7%, 23.4%, and 23.9% higher values than those of extruded Cu40Zn brass, respectively.\nDOI:10.1016/j.jmst.2013.08.013",
+    "output": "依据文献片段,所提取的性能为:617 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jmst.2013.08.013。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该横向销孔在交变扭矩下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其横向销孔的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由扭矩载荷谱与最大扭矩确定应力幅与平均应力;计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响;检测方面:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该键槽在交变扭矩下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其键槽的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由扭矩载荷谱与最大扭矩确定应力幅与平均应力;计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度;检测方面:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:轴肩台阶在旋转弯曲(轴转动)下,轴肩圆角处因截面突变产生应力集中,圆角越小集中越严重,旋转弯曲下易在圆角处疲劳。\n2. 校核路径:轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。需结合调质状态、几何尺寸与转速与弯矩载荷谱。\n3. 制造与表面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量。\n4. 检测:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  }
+]

@@ -1,0 +1,797 @@
+[
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：45钢阶梯轴。现状：承受交变扭矩，图纸未标圆角、粗糙度和调质硬度。",
+    "output": "审查意见：\n1. 核算键槽及轴肩处疲劳强度和安全系数\n2. 补充轴肩圆角、退刀槽及表面粗糙度\n3. 明确调质硬度范围和有效检验位置\n4. 按装配功能补充同轴度与圆跳动"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：齿轮轴。现状：20CrMnTi渗碳淬火，齿根过渡与磨削余量未定义。",
+    "output": "审查意见：\n1. 校核齿根弯曲和接触疲劳\n2. 明确渗碳层深度、表面及心部硬度\n3. 规定齿根圆角和磨削余量\n4. 控制热处理变形并安排最终精度检验"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：法兰螺栓连接。现状：承受周期轴向载荷，未给预紧力和拧紧顺序。",
+    "output": "审查意见：\n1. 校核接头不分离和螺栓疲劳\n2. 规定预紧力、摩擦条件和拧紧方法\n3. 采用对称分级拧紧并记录结果\n4. 评估嵌入松弛和防松方案"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：焊接机架。现状：Q355焊接结构，关键焊缝只标焊脚尺寸。",
+    "output": "审查意见：\n1. 明确焊缝等级、长度和连续性\n2. 检查载荷路径及焊趾应力集中\n3. 规定焊接顺序、变形控制和必要的消应力\n4. 定义无损检测方法与验收比例"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：滚动轴承座。现状：高速轴承温升敏感，配合与润滑方式未注明。",
+    "output": "审查意见：\n1. 根据载荷方向确定内外圈配合\n2. 校核游隙、预紧和热膨胀影响\n3. 明确润滑剂、供给方式及密封\n4. 补充座孔圆度、同轴度和肩部垂直度"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：薄壁箱体。现状：铝合金铸件壁厚变化大且存在局部厚大热节。",
+    "output": "审查意见：\n1. 优化壁厚均匀性和圆角过渡\n2. 检查缩孔、热裂和变形风险\n3. 合理布置筋板并避免刚度突变\n4. 建立加工基准和时效处理要求"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：键连接。现状：平键传递双向冲击扭矩，键长按轴段长度直接取值。",
+    "output": "审查意见：\n1. 校核键和轮毂的挤压及剪切强度\n2. 检查键槽削弱后的轴疲劳强度\n3. 明确键侧面配合和轴向定位\n4. 冲击严重时比较花键或胀紧连接方案"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：联轴器。现状：两轴存在热位移，选用刚性联轴器且未给对中要求。",
+    "output": "审查意见：\n1. 计算热位移和安装偏差\n2. 选择具有所需补偿能力的联轴器\n3. 规定冷态对中目标值\n4. 校核联轴器及相邻轴承附加载荷"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：压力容器支座。现状：设备有热膨胀，两个支座均设计为完全固定。",
+    "output": "审查意见：\n1. 设置固定端和滑动端释放热位移\n2. 校核支座、地脚螺栓及局部应力\n3. 明确滑动副材料和摩擦条件\n4. 检查管口载荷与支座约束耦合"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：链传动。现状：中心距较长且高速运行，未设置张紧和防护。",
+    "output": "审查意见：\n1. 校核链速、多边形效应和动载荷\n2. 设置合理张紧及磨损补偿\n3. 检查链轮共面度与轴系刚度\n4. 增加封闭防护和润滑措施"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：锥齿轮副。现状：装配图未给安装距和接触区要求。",
+    "output": "审查意见：\n1. 明确安装距、轴交角及侧隙\n2. 规定齿面接触斑点位置和比例\n3. 校核轴承刚度及箱体变形\n4. 安排装配调整和空载跑合检验"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：过盈配合齿圈。现状：工作温度变化大，仅按室温过盈量设计。",
+    "output": "审查意见：\n1. 按最高与最低温度校核剩余过盈\n2. 校核轮毂和齿圈装配应力\n3. 规定加热温度、装配速度和测温\n4. 设置防转冗余并检查圆度变化"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：铸铁皮带轮。现状：轮辐与轮毂连接处为尖角且高速旋转。",
+    "output": "审查意见：\n1. 增加圆角并改善轮辐过渡\n2. 校核离心载荷和交变弯曲\n3. 规定铸造缺陷和动平衡等级\n4. 设置超速验证及防护要求"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：飞轮。现状：惯量较大，键槽位于最大应力区域。",
+    "output": "审查意见：\n1. 校核轮缘离心应力和轴毂连接\n2. 评估键槽应力集中并优化连接\n3. 规定材料缺陷检测和动平衡\n4. 设置可靠防护并校核超速工况"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：机械密封。现状：介质易汽化，密封腔压力和冲洗方案未定义。",
+    "output": "审查意见：\n1. 核对压力温度与汽化裕量\n2. 选择端面材料和密封型式\n3. 确定冲洗、冷却和过滤方案\n4. 校核轴跳动、窜量及安装尺寸"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：滑动轴承。现状：低速重载启动频繁，仍按稳定液体润滑设计。",
+    "output": "审查意见：\n1. 检查启动和停机阶段边界润滑\n2. 校核比压、PV值和温升\n3. 选择轴瓦材料及油槽布置\n4. 设置预润滑或辅助供油措施"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：凸轮机构。现状：从动件加速度突变，运行中出现冲击。",
+    "output": "审查意见：\n1. 优化运动规律保证加速度连续\n2. 校核接触应力和最小曲率半径\n3. 检查压力角及从动件导向\n4. 评估弹簧刚度、预紧和高速跳动"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：机器人关节输出轴。现状：要求低回差，轴承跨距短且壳体刚度不足。",
+    "output": "审查意见：\n1. 建立回差和扭转刚度分配\n2. 优化轴承布置及预紧\n3. 校核壳体变形对啮合的影响\n4. 定义装配测量和寿命验收方法"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别风险并给出可执行的审查意见。",
+    "input": "对象：高速转子。现状：工作转速接近一阶临界转速，未给升降速策略。",
+    "output": "审查意见：\n1. 完成临界转速和振型分析\n2. 保持规定的分离裕量或快速越过临界区\n3. 校核不平衡响应和轴承稳定性\n4. 规定动平衡、振动监测和超速保护"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：压缩机。现象：排气温度高且排气量下降。",
+    "output": "可能原因：\n1. 入口过滤器堵塞\n2. 冷却不足\n3. 阀片泄漏或损坏\n4. 活塞环或密封磨损\n排查与处置：\n1. 核对吸排气压力温度\n2. 检查冷却水和换热器\n3. 进行阀组温度与泄漏检查\n4. 测量级间参数并安排拆检"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：输送带。现象：跑偏并出现边缘磨损。",
+    "output": "可能原因：\n1. 滚筒或托辊不正\n2. 落料点偏载\n3. 张紧不均\n4. 接头不正\n排查与处置：\n1. 空载和负载分别观察跑偏\n2. 校正头尾滚筒与托辊\n3. 调整落料中心和张紧\n4. 检查接头垂直度并更换损坏托辊"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：链传动。现象：链条周期冲击且局部发热。",
+    "output": "可能原因：\n1. 链节伸长不均\n2. 链轮不同面\n3. 张紧过松或过紧\n4. 润滑不足\n排查与处置：\n1. 测量多节链长\n2. 检查链轮共面度和齿形\n3. 调整中心距或张紧器\n4. 恢复合适润滑并更换成套磨损件"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：机械密封。现象：启动后持续滴漏并逐渐加重。",
+    "output": "可能原因：\n1. 端面损伤或夹杂颗粒\n2. 轴跳动或窜量超限\n3. 密封冲洗不足\n4. O形圈材料不适配\n排查与处置：\n1. 确认泄漏位置和介质状态\n2. 检查冲洗压力流量\n3. 测量轴跳动与窜量\n4. 停机检查端面并核对材料兼容性"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：齿轮箱。现象：啮合频率及其边带明显升高。",
+    "output": "可能原因：\n1. 齿面点蚀或局部断齿\n2. 偏心导致调制\n3. 轴系不对中\n4. 负载波动\n排查与处置：\n1. 比较边带间隔与转频\n2. 检查油液磨粒\n3. 做齿面内窥和接触检查\n4. 复核轴承、对中和实际负载"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：机器人关节。现象：重复定位误差随温度升高而增大。",
+    "output": "可能原因：\n1. 减速器热膨胀和回差变化\n2. 编码器安装松动\n3. 轴承预紧变化\n4. 控制补偿不足\n排查与处置：\n1. 记录温度与误差关联\n2. 检查编码器和机械零位\n3. 测冷态热态回差\n4. 排除松动后建立温度补偿"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：螺杆输送机。现象：电流升高并间歇卡停。",
+    "output": "可能原因：\n1. 物料结块或异物\n2. 螺旋叶片变形\n3. 中间吊轴承损坏\n4. 出料受阻\n排查与处置：\n1. 停机隔离能源后清料\n2. 检查出入口和异物\n3. 测螺旋轴直线度及间隙\n4. 检查吊轴承并校核实际输送量"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：换热器。现象：压降升高且换热能力下降。",
+    "output": "可能原因：\n1. 通道结垢或堵塞\n2. 流量分配不均\n3. 介质性质变化\n4. 内部泄漏\n排查与处置：\n1. 比较进出口温压和流量\n2. 分析污垢趋势\n3. 进行泄漏或示踪检查\n4. 清洗后复测并优化水质管理"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：法兰连接。现象：周期载荷下螺栓反复松动。",
+    "output": "可能原因：\n1. 预紧力不足或离散过大\n2. 接合面嵌入沉降\n3. 外载导致接头分离\n4. 装配顺序或摩擦条件失控\n排查与处置：\n1. 检查残余预紧力与接合面压痕\n2. 校核连接刚度和分离条件\n3. 复核润滑及拧紧工艺\n4. 采用受控预紧和合适的防松方案"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：减速机。现象：温升偏高、周期性振动且润滑油变深。",
+    "output": "可能原因：\n1. 润滑油老化、污染或粘度不合适\n2. 齿轮偏载或齿面损伤\n3. 轴承磨损或游隙异常\n4. 联轴器对中不良\n排查与处置：\n1. 检查油位油品和磨粒\n2. 分析振动频谱中的齿轮与轴承特征\n3. 检查对中、地脚和接触斑点\n4. 按结果换油、校中或更换损伤件"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：离心泵。现象：流量下降、振动增大并伴随汽蚀声。",
+    "output": "可能原因：\n1. 入口阻力过大或液位不足\n2. 介质温度升高导致汽化裕量不足\n3. 叶轮堵塞或磨损\n4. 泵轴对中不良\n排查与处置：\n1. 核对入口压力和NPSH裕量\n2. 检查过滤器阀门和吸入管漏气\n3. 检查叶轮及口环\n4. 校核工况点并重新对中"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：滚动轴承。现象：运行温度持续升高并有高频噪声。",
+    "output": "可能原因：\n1. 润滑不足、过量或油脂不匹配\n2. 预紧过大或游隙过小\n3. 安装偏斜\n4. 滚道和滚动体损伤\n排查与处置：\n1. 检查温升趋势与润滑状态\n2. 测量振动包络谱\n3. 复核配合游隙和轴肩精度\n4. 必要时拆检并更换轴承"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：液压系统。现象：执行器爬行且速度不稳定。",
+    "output": "可能原因：\n1. 系统混入空气\n2. 油液污染导致阀芯卡滞\n3. 密封摩擦不均或内泄漏\n4. 泵流量波动\n排查与处置：\n1. 排气并检查吸油侧密封\n2. 检测油液清洁度\n3. 测量各段压力和内泄漏\n4. 清洗阀件并检查泵状态"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：气动缸。现象：低速运行时抖动且终点冲击。",
+    "output": "可能原因：\n1. 供气压力波动\n2. 节流方式不合适\n3. 密封摩擦或导向偏载\n4. 缓冲调节不当\n排查与处置：\n1. 记录压力和流量\n2. 检查节流阀与管径\n3. 脱开负载检查缸体阻力\n4. 重新对中并调整终端缓冲"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因并给出排查顺序。",
+    "input": "设备：风机。现象：振动在一倍转频处突出。",
+    "output": "可能原因：\n1. 叶轮积灰或质量不平衡\n2. 联轴器偏心\n3. 转子弯曲\n4. 基础松动\n排查与处置：\n1. 检查叶轮清洁和缺损\n2. 测相位并区分不平衡与偏心\n3. 检查轴跳动和对中\n4. 紧固基础后做现场动平衡"
+  },
+  {
+    "instruction": "你是一名工程计算工程师。请给出完整计算过程。",
+    "input": "已知:矩形截面简支梁,b=20 mm,h=50 mm,跨中受集中力 F=2 kN,跨度 L=200 mm。求跨中最大弯曲应力。",
+    "output": "已知:F=2 kN=2000 N,L=200 mm,b=20 mm,h=50 mm。\n1. 跨中弯矩(简支梁中点集中力):M=F·L/4=2000×200/4=1.0×10^5 N·mm。\n2. 抗弯截面系数:W=b·h²/6=20×50²/6≈8333 mm³。\n3. 最大弯曲应力:σ=M/W=(1.0×10^5)/8333≈12.0 MPa。\n4. 单位:N/mm²=MPa。\n5. 假设:线弹性、小变形、材料各向同性、忽略自重。\n6. 未考虑:剪切应力、稳定性(薄壁需另算)、长期蠕变、应力集中。\n7. 进一步校核:对照材料许用应力与安全系数判断。"
+  },
+  {
+    "instruction": "你是一名结构设计审查工程师。请评估薄壁梁的稳定性风险。",
+    "input": "对象:薄壁箱形梁,受弯剪。未提供板厚、高厚比、加筋布置和载荷。",
+    "output": "信息不足,无法判定是否安全。\n1. 失效风险:薄板在压应力区可能局部失稳(屈曲),先于强度破坏;腹板在高剪下也可能剪切屈曲。\n2. 校核路径:按板壳屈曲理论或规范校核受压翼缘与腹板的宽厚比/高厚比;必要时设置纵向加劲肋。\n3. 缺失信息:板厚、截面尺寸、加筋布置、材料、载荷与边界约束。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请分析轴承异响的可能原因。",
+    "input": "现象:运转中的滚动轴承发出周期性异响,伴有轻微温升。",
+    "output": "异响与温升提示滚动体或滚道可能受损。\n可能原因:\n1. 滚道或滚动体表面出现点蚀/剥落/压痕,周期性冲击产生异响(对应缺陷特征频率)。\n2. 润滑不良或润滑脂流失,干摩擦引起温升与噪声。\n3. 游隙过大或配合松动,引起冲击声。\n4. 安装不当(过盈量过大/锤击损伤)导致滚道损伤。\n排查步骤:\n1. 采集振动/声信号,用包络解调找轴承缺陷特征频率(外圈/内圈/滚动体)。\n2. 检查润滑状态与补充润滑。\n3. 测量游隙与配合。\n4. 必要时拆检滚道与滚动体表面。\n区分:早期点蚀可监测运行,剥落快速扩展则需及时更换。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请评估轴承配合与游隙选择的合理性。",
+    "input": "对象:深沟球轴承,内圈旋转、受径向载荷。未提供载荷大小、转速、工况温度和座孔公差。",
+    "output": "配合与游隙需结合工况确定,不能凭通用值给出。\n1. 关注点:内圈受旋转载荷应选过盈配合;游隙要补偿温升和过盈引起的膨胀;转速影响 dn 值与润滑选择。\n2. 校核方向:计算当量动载荷与额定寿命 L10;核查配合后游隙是否仍处在合适范围。\n3. 缺失信息:径向/轴向载荷、转速、温度、公差等级、预期寿命。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名齿轮失效分析工程师。请解释齿面点蚀的成因与应对。",
+    "input": "现象:闭式齿轮工作一段时间后齿面出现点蚀。请分析原因与改进方向。",
+    "output": "点蚀是齿面接触疲劳的典型表现。\n1. 成因:齿面接触应力反复作用,次表面剪切应力最大处萌生微裂纹,扩展后材料剥落形成凹坑;润滑不良、齿面硬度不足、接触应力过大会加速点蚀。\n2. 应对:校核接触应力是否满足许用值;提高齿面硬度(渗碳/表面淬火);改善润滑与表面粗糙度;必要时修正齿轮修形以减小偏载。\n3. 区分:早期点蚀可能跑合后收敛,扩展性点蚀则预示寿命不足,需停机处理。\n4. 缺失信息:载荷、材料硬度、润滑状态、点蚀发展阶段。"
+  },
+  {
+    "instruction": "你是一名齿轮设计审查工程师。请指出关键失效风险与校核方向。",
+    "input": "对象:某闭式齿轮传动,持续传递较大扭矩。未提供模数、齿数、材料、热处理和载荷谱。",
+    "output": "信息不足,无法给出确定性结论。\n1. 失效风险:齿根弯曲疲劳折断、齿面点蚀/剥落(接触疲劳)、胶合。\n2. 校核方向:齿根弯曲应力按 ISO 6336 或 GB/T 3480 校核;齿面接触应力按赫兹接触校核;高速重载还需校核胶合。\n3. 材料/热处理:渗碳淬火或调质,需保证齿面硬度与心部韧性匹配。\n4. 缺失信息:模数、齿数、压力角、螺旋角、材料与热处理、载荷谱、润滑条件。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名有限元分析工程师。请说明边界条件设置对结果的影响。",
+    "input": "问题:FEA 中约束位置对结果影响大吗?应如何设置?",
+    "output": "边界条件对结果影响很大,常被低估。\n1. 影响:约束位置与方式直接决定刚度与载荷路径,过约束会人为提高刚度、低估变形与应力,欠约束则可能刚体位移或应力失真。\n2. 原则:尽量模拟真实传力路径;对称结构用对称边界;接触面用接触而非硬约束;集中力作用处易应力奇异,应避免在该处取应力。\n3. 验证:检查反力是否与外载平衡;变形形态是否合理;必要时用 Saint-Venant 原理判断关注区是否远离边界。\n4. 缺失信息:模型几何、载荷、实际安装约束。"
+  },
+  {
+    "instruction": "请仅依据给定文献片段提取材料性能,并说明适用条件。不得把条件性数值泛化为材料常数。",
+    "input": "文献片段:某文献报告经 T6 处理的 A356 铝合金,在室温下测得抗拉强度 324 MPa、屈服强度 280 MPa、延伸率 5%。问题:该材料经 T6 处理后的屈服强度是多少?",
+    "output": "依据文献片段,经 T6 处理的 A356 铝合金在室温下屈服强度为 280 MPa。\n适用条件:该数值仅适用于 T6 热处理状态、室温、文献所述的成分与工艺条件;不可泛化为 A356 在所有状态下的屈服强度(铸态、其他热处理状态的数值会不同)。如需用于设计,应以相应标准或认证数据为准。"
+  },
+  {
+    "instruction": "你是一名热处理工程师。请说明热处理变形控制要点。",
+    "input": "问题:精密零件淬火后变形超差,可能原因与对策?",
+    "output": "淬火变形常见,需系统控制。\n1. 原因:加热/冷却不均产生热应力与相变应力;零件几何不对称、截面突变会加剧变形;材料淬透性与淬火介质影响显著。\n2. 对策:优化结构(对称、避免截面突变);选择合适淬火介质(油淬/分级/等温);控制加热温度与保温;采用淬火压床或工装定型;预留精加工余量;对已变形件可校直+去应力回火。\n3. 表面完整性:注意脱碳与淬火裂纹,关键件做无损检测。\n4. 缺失信息:材料、零件几何、热处理工艺、精度要求。"
+  },
+  {
+    "instruction": "你是一名有限元分析工程师。请说明应力结果的网格敏感性。",
+    "input": "问题:某 FEA 模型加密网格后应力峰值升高很多,如何判断结果是否可信?",
+    "output": "网格敏感性问题需谨慎处理。\n1. 现象:在应力集中区(缺口、圆角、接触),网格越密名义应力峰值越高,可能不收敛于真实值——这是奇异点的典型表现。\n2. 判断方法:做网格收敛性研究(逐级加密),看应力是否趋于稳定;若持续发散,说明该点是理论奇异,应改用名义应力+应力集中系数或热点应力法,而不是直接取峰值。\n3. 边界与单元:检查约束是否过约束、单元类型与长宽比是否合理、线性 vs 非线性。\n4. 工程判断:FEA 结果要结合解析解与规范,不能只看云图颜色;对疲劳关键点要用合适的应力提取方法。\n5. 缺失信息:几何、载荷、单元类型、网格尺寸序列。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足时必须说明缺什么。",
+    "input": "问题:这台减速机能用 10 年吗?",
+    "output": "无法判断寿命,缺少关键信息。\n需要补充:\n1. 载荷谱:实际工况下的扭矩/功率随时间分布(不是名义值)。\n2. 寿命定义:是指齿轮/轴承的疲劳寿命,还是大修周期?\n3. 工况:每天运行小时数、启停次数、冲击载荷、环境温度。\n4. 维护:润滑与保养状况。\n5. 设计依据:原始设计的强度等级、材料与精度。\n补充后可按 Miner 累积损伤或轴承 L10 寿命估算。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足时必须说明缺什么。",
+    "input": "问题:这个零件用 45 钢做,许用应力取多少?",
+    "output": "不能直接给出许用应力数值。\n原因:45 钢的力学性能随热处理状态(正火/调质/表面淬火)和毛坯尺寸差异很大;许用应力还需依据载荷性质(静/交变)、失效准则(屈服/疲劳)和适用安全系数确定。\n需要补充:热处理状态与硬度、毛坯截面尺寸、载荷性质、适用的设计标准。\n补充后可从材料手册或标准查对应强度并按安全系数折算。该问题建议检索材料标准(requires_rag)。"
+  },
+  {
+    "instruction": "你是一名机械工程助手。判断该问题是否需要检索标准或工具,并说明。",
+    "input": "问题:Q345 钢的许用应力是多少?",
+    "output": "该问题需要检索材料标准或设计规范,不能仅凭通用记忆给出最终设计值。\n原因:Q345 的许用应力取决于载荷性质(静/动载)、工况温度、板厚分组以及适用的设计规范(不同行业规范取值不同);通用模型记忆的数值可能是平均值或不适用,直接给出会误导设计。\n建议:检索适用的国家标准或行业规范(如钢结构设计标准),按板厚分组与载荷工况查许用应力或由强度标准值除以抗力分项系数确定。此问题应走 RAG/标准检索。"
+  },
+  {
+    "instruction": "你是一名设备故障诊断工程师。请根据现象分析原因与排查步骤。",
+    "input": "现象:减速机运行中温升偏高,伴随周期性振动,润滑油颜色变深。",
+    "output": "现象提示润滑与啮合/轴承可能存在问题。\n可能原因(按概率):\n1. 润滑油老化、污染或粘度不当,润滑不良导致温升与磨损。\n2. 轴承磨损、游隙异常或装配不良,产生周期性振动。\n3. 齿轮啮合不良、齿面点蚀或偏载,啮合频率振动增大、油中磨粒增多使油色变深。\n4. 联轴器对中不良,引入附加载荷。\n排查步骤:\n1. 检查油位、油品、污染物与换油周期,取样做油液分析(磨粒)。\n2. 采集振动频谱,判断是否存在轴承特征频率或啮合频率及其边带。\n3. 检查联轴器对中与地脚螺栓。\n4. 停机后检查齿面接触斑点、轴承状态与箱体内部。\n5. 依据结果决定换油、校中、更换轴承或修复齿轮。需结合具体型号与运行参数。"
+  },
+  {
+    "instruction": "你是一名材料选择工程师。请说明选材权衡。",
+    "input": "问题:某轴要求高强度同时有较好韧性,应如何考虑材料与热处理?",
+    "output": "高强度与高韧性常需权衡。\n1. 思路:中碳调质钢(如 40Cr、42CrMo)调质后能获得较好的强韧匹配;对更高强度可考虑表面淬火(硬化表层抗疲劳、心部保持韧性)或渗碳钢(渗碳淬火用于齿面)。\n2. 关键:不能只看抗拉强度,要同时关注屈服强度、冲击韧性与疲劳性能;还要考虑淬透性(截面越大越要选淬透性高的钢)。\n3. 工艺影响:调质后若再加工,注意加工余量与表层性能;表面强化(喷丸/滚压)可提升疲劳强度。\n4. 缺失信息:载荷性质、截面尺寸、工况温度、成本与可制造性约束。具体牌号与硬度需结合标准确定(requires_rag)。"
+  },
+  {
+    "instruction": "你是一名机械工程教师。请简明解释一个基础概念。",
+    "input": "问题:静强度校核和疲劳校核有什么区别?",
+    "output": "两者关注不同的失效方式。\n静强度校核:针对一次性或缓慢施加的载荷,校核最大应力是否低于屈服或强度极限,防止塑性变形或瞬时断裂。关注的是最大应力与许用应力。\n疲劳校核:针对交变载荷,关注应力幅(变化范围)与平均应力,依据材料的疲劳极限或 S-N 曲线估算寿命。即便最大应力远低于屈服,长期交变也可能疲劳断裂。\n关键区别:\n1. 静强度看最大应力;疲劳看应力幅与循环次数。\n2. 交变载荷必须做疲劳校核,不能用静强度合格代替疲劳合格。\n3. 应力集中、表面质量、尺寸对疲劳影响巨大,对静强度影响相对小。"
+  },
+  {
+    "instruction": "你是一名机械工程教师。请简明解释一个基础概念。",
+    "input": "问题:什么是应力集中?为什么它对疲劳特别危险?",
+    "output": "应力集中指在几何突变处(缺口、孔、台阶、键槽等)局部应力显著高于名义应力的现象,用理论应力集中系数 Kt 描述。\n对疲劳特别危险的原因:\n1. 疲劳寿命对应力幅极其敏感,局部应力升高会使疲劳寿命呈幂律急剧下降。\n2. 应力集中处易成为疲劳裂纹萌生源。\n3. 静载下局部超过屈服可通过塑性重分布缓解,但交变载荷下高应变循环会持续累积损伤。\n减小措施:加大圆角、避免尖角、表面强化(喷丸/滚压)、降低表面粗糙度、合理设计过渡区。"
+  },
+  {
+    "instruction": "你是一名机械设计工程师。请说明表面淬火对疲劳的影响。",
+    "input": "问题:表面感应淬火为什么能提高轴的疲劳强度?",
+    "output": "表面感应淬火能显著提高疲劳强度,机理是多方面的。\n1. 表层形成高硬度马氏体,提高强度与耐磨性,疲劳裂纹更难萌生。\n2. 淬火后在表层形成有利的残余压应力,能抵消部分工作拉应力,显著延长疲劳寿命。\n3. 注意:硬化层深度与位置要覆盖高应力区;过渡区(硬度回落处)可能成为新的薄弱点;淬火后要回火并控制裂纹。\n4. 局限:对接触疲劳也有效,但不能替代几何优化(圆角/倒圆仍是基础)。\n5. 缺失信息:材料、硬化层深度要求、工况载荷。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足时必须说明缺什么,不得强行下结论。",
+    "input": "问题:这根轴能不能承受 10 kN·m 的扭矩?是否安全?",
+    "output": "当前无法判断是否安全,缺少大量必要信息。\n需要补充:\n1. 几何:轴径、长度、有无键槽/孔/台阶等应力集中源。\n2. 材料:牌号、热处理状态、许用剪应力或强度数据。\n3. 载荷性质:10 kN·m 是静载还是交变?有无弯矩叠加?\n4. 约束与寿命:支承跨距、转速、目标寿命与可靠度。\n5. 标准:适用的安全系数与设计规范。\n补充后可进行的校核:静强度(τ=T/Wt)、扭转刚度、若交变则疲劳校核。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名疲劳分析工程师。请说明校核方法与所需信息。",
+    "input": "对象:旋转轴,承受恒定横向力(旋转弯曲)。请说明应如何做疲劳校核。",
+    "output": "旋转弯曲下轴上一点承受对称循环弯曲应力,需做疲劳校核而非静强度校核。\n1. 方法:算最大弯曲名义应力;查材料的疲劳极限(或由强度极限估算)与疲劳缺口系数;考虑尺寸、表面、置信度等修正系数得到零件疲劳极限;按 σ_a 与疲劳极限比较或做有限寿命估算。\n2. 关键区分:静强度用最大应力对屈服/强度的比;疲劳用应力幅与疲劳极限。两者不能混用。\n3. 缺失信息:几何、材料疲劳性能、载荷幅、目标寿命、应力集中源。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:阶梯轴,轴肩处直径突变,用于轴承定位。承受旋转弯曲。未提供两段直径、圆角半径和材料。",
+    "output": "轴肩是常见应力集中源,需重点关注。\n1. 失效模式:轴肩圆角处应力集中,旋转弯曲下易疲劳开裂。\n2. 校核路径:确认大小端直径比、圆角半径与相邻零件(轴承内圈)的干涉,算理论应力集中系数并做疲劳校核。\n3. 设计建议:在定位允许范围内尽量加大圆角半径,必要时用卸载槽减小应力集中。\n4. 缺失信息:两段直径、圆角半径、材料与热处理、载荷谱。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名工程计算工程师。请给出完整计算过程,含公式、单位、假设。",
+    "input": "已知:实心圆轴承受扭矩 T=5 kN·m,轴径 d=50 mm。求最大扭转剪应力。材料许用剪应力待确认。",
+    "output": "已知:T=5 kN·m=5×10^6 N·mm,d=50 mm。\n1. 抗扭截面系数:Wt=π·d³/16=π×50³/16≈24544 mm³。\n2. 最大扭转剪应力:τ=T/Wt=(5×10^6)/24544≈203.7 MPa。\n3. 单位换算:1 kN·m=10^6 N·mm,结果为 MPa(N/mm²)。\n4. 假设:纯扭转、实心圆截面、弹性范围内、无应力集中。\n5. 未考虑:键槽/孔/台阶引起的应力集中(实际需乘理论应力集中系数);弯矩叠加;交变载荷下的疲劳。\n6. 进一步校核:需对照材料许用剪应力判断是否安全;若为交变载荷需做疲劳校核而非仅静强度。许用剪应力需查材料标准与安全系数(requires_rag)。"
+  },
+  {
+    "instruction": "你是一名机械设计工程师。请说明螺旋压缩弹簧疲劳校核要点。",
+    "input": "对象:承受交变载荷的圆柱螺旋压缩弹簧。请说明疲劳校核要点与易错点。",
+    "output": "弹簧在交变载荷下需做疲劳校核。\n1. 方法:计算簧丝内侧最大剪切应力幅与平均应力;查材料的剪切疲劳极限;按 Goodman/Gerber 型模型校核;关注共振(工作频率远离固有频率)。\n2. 易错点:不能只用最大剪切应力做静强度判断;喷丸可显著提高弹簧疲劳强度;表面脱碳与划伤会大幅降低寿命。\n3. 缺失信息:簧丝直径、中径、有效圈数、材料、载荷幅与频率。"
+  },
+  {
+    "instruction": "你是一名焊接结构审查工程师。请指出该焊接接头的疲劳风险与改进方向。",
+    "input": "对象:承载梁的对接+角焊缝组合接头,承受交变载荷。未提供板厚、焊缝形式、载荷谱和材质。",
+    "output": "信息不足,无法给出寿命结论。\n1. 失效风险:焊趾处应力集中与残余拉应力叠加,是疲劳裂纹主要起源;未熔合、咬边等缺陷会进一步降低疲劳强度。\n2. 评估方向:按名义应力法或热点应力法(IIW 推荐)做疲劳评估;关键焊缝可考虑焊趾打磨/TIG 熔修/超声冲击提高疲劳强度。\n3. 制造要求:控制焊缝成形、避免咬边与未熔合,重要接头做无损检测。\n4. 缺失信息:板厚、焊缝形式、材质、载荷谱、探伤等级。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "文献片段给出珠光体和铁素体弹塑性模型参数E=200 GPa、泊松比0.3。问题：文段中的杨氏模量是多少？",
+    "output": "文段给出的模型杨氏模量为200 GPa。该数值属于该文献的有限元材料参数，不能脱离文献材料状态直接推广。 来源DOI：10.1016/j.msea.2010.07.045。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "文献片段说明ZQS700Z低合金高强钢的屈服强度760 MPa、抗拉强度795 MPa、延伸率22.9%。问题：屈服强度是多少？",
+    "output": "文段给出的ZQS700Z屈服强度为760 MPa。回答仅适用于该文献所述原材料状态。 来源DOI：10.1007/s00170-019-04462-y。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "文献片段说明Ti-15V-3Al-3Sn-3Cr经860摄氏度固溶1.5小时后，抗拉强度670 MPa、屈服强度645 MPa、延伸率4%。问题：670 MPa对应什么性能？",
+    "output": "670 MPa对应抗拉强度。适用条件是文段所述860摄氏度固溶1.5小时并冷却后的状态。 来源DOI：10.1007/s11665-020-05445-x。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "文献片段说明体心立方VNbMoTaW合金在1673 K高温下仍保持大于600 MPa的屈服强度。问题：该数值属于什么材料和条件？",
+    "output": "该数值属于VNbMoTaW合金在1673 K条件下的屈服强度，文段给出的范围是大于600 MPa。不能将其当作室温性能。 来源DOI：10.1016/j.mtla.2019.100243。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "文献片段说明Ni30Co30Fe13Cr15Al6Ti6高熵合金在77 K下抗拉强度为1.7 GPa。问题：文段给出的抗拉强度是多少？",
+    "output": "文段给出的抗拉强度为1.7 GPa，测试温度为77 K。温度条件必须与数值一起保留。 来源DOI：10.1016/j.jallcom.2019.153526。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "给定试验片段：某C35钢的单调屈服强度为353 MPa，循环屈服强度为278 MPa。问题：循环屈服强度是多少？",
+    "output": "文段给出的循环屈服强度为278 MPa；353 MPa是单调屈服强度，两者不能混用。 来源DOI：10.1016/j.ijfatigue.2008.09.005。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "给定材料模型片段：SiC颗粒按线弹性处理，弹性模量E=427 GPa，泊松比0.17。问题：SiC颗粒的弹性模量是多少？",
+    "output": "该模型中SiC颗粒的弹性模量为427 GPa，泊松比为0.17。该答案是模型输入参数，不代表所有SiC产品状态。 来源DOI：10.1007/s11837-015-1413-9。"
+  },
+  {
+    "instruction": "请仅依据给定片段提取材料性能，并说明适用条件，不得把条件性数值泛化为材料常数。",
+    "input": "给定试验片段：超细晶FeNiCoCr合金的屈服强度1525 MPa、抗压强度1987 MPa、失效应变24.4%。问题：屈服强度是多少？",
+    "output": "文段给出的屈服强度为1525 MPa。1987 MPa是抗压强度，24.4%是失效应变。 来源DOI：10.1016/j.jallcom.2020.156796。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the yield strength of ZQS700Z?\n文献片段(英文原文,作证据):In this paper, the ZQS700Z low alloy high-strength steel produced by Taiyuan Iron and Steel Plant in China is used as the raw material of the V channel. Its yield strength is 760 MPa, tensile strength is 795 MPa, and elongation is 22.9%.\nDOI:10.1007/s00170-019-04462-y",
+    "output": "依据文献片段,所提取的性能为:760 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1007/s00170-019-04462-y。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the youngs modulus of Al aloy 7075?\n文献片段(英文原文,作证据):The investigated material is Al aloy 7075, with yield strength =503 MPa, ultimate tensile strength =572 MPa Young's modulus (E) =71.7 GPa, and Hardness = 87 HRB. For each specimen, center line average value (Ra) is evaluated across the depth of samples at three levels with five measurements at each level. The first level at depth 1.5 mm from the top surface, the second level at mid depth, and the third at 1.5 mm depth from the lower surface with sampling length 1.5 mm, and cut-off length 0.3 mm (as shown in Fig. 4). Then, average value for the measurements is evaluated.\nDOI:10.1016/j.jmapro.2020.10.036",
+    "output": "依据文献片段,所提取的性能为:572 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jmapro.2020.10.036。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a ultimate tensile strength of 320 MPa?\n文献片段(英文原文,作证据):The pipe specimens used in the present studies are made of Type 304LN stainless steel conforming to ASTM A 312/A 312 M - 09 standard []. Actual composition of the material and the specified values as per ASTM A 312/A 312 M - 09 standard are given in Table 1. The yield and ultimate tensile strengths of the material are 320 MPa and 653 MPa respectively. The percentage elongation is 67 and the Young's modulus is 195 GPa. The details of pipe specimens are given in Table 2. Fig. 1 shows a typical straight pipe with circumferential through-wall notch in the weld. The pipes had circumferential through-wall notch in the weld. The length of the pipes varied from 4856 mm to 5090 mm. The average thickness of the pipes varied from 23.3 mm to 26.1 mm. The initial length, width and angle of notch are approximately 170 mm, 3.0 mm and 60° respectively.\nDOI:10.1016/j.ijpvp.2019.05.012",
+    "output": "依据文献片段,所提取的性能为:304LN。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.ijpvp.2019.05.012。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of 1200 MPa?\n文献片段(英文原文,作证据):However, the yield strength of single Al84Ni8.4Y4.8La1.8Co1 bulk glassy alloy hot pressed under same condition can not reflect the real strength because of high porosity and weak bonding strength. The approximated yield strength of special area of glass transition to crystalline phases can be obtained through Vickers Micro-hardness measurements on cross-sections of specimens. The hardness is near 410. According to the relationship between the hardness and strength , the hardness is nearly three times of yield strength or ultimate compressive strength, which would be 1339 MPa. Due to containing a great deal of metallic compounds, transitional area without work-hardening ability, working like ceramics, exhibits very high hardness which is larger than three times of yield strength or ultimate compressive strength. Therefore, the yield strength can value 1200 MPa.\nDOI:10.1016/j.jallcom.2015.07.011",
+    "output": "依据文献片段,所提取的性能为:Al84Ni8.4Y4.8La1.8Co1。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2015.07.011。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 434 MPa for AA2524?\n文献片段(英文原文,作证据):The variations of mechanical properties before and after creep aging process with pre-strains between 0% and 6% are shown in Fig. 5. It can be clearly seen from Fig. 5 that the pre-strain increases the yield and tensile strengths of the studied alloy after creep aging process. When creep aging is initiated, an interesting observation can be found. For all pre-strained samples, the yield strength showed a drop after creep aging at 180 °C for 1 h, and then the yield strength increases at a high rate. The explanation for this result is that the cold-worked structure undergoes dislocation recovery , since there is no obvious reduce in yield strength for the un-strained sample. During the later stages of creep aging, the yield strength of AA2524 alloy reaches a peak stress, and then it drops, which is described by classic precipitation strengthening behavior . It can be observed from Fig. 5(a) that the pre-strain can significantly increase the peak yield strength and reduce the time to reach peak yield strength. The un-stretched sample can reach the peak yield strength of 341 MPa at about 12 h. But, for the samples with the pre-strains of 1.5%, 4% and 6%, the peak yield strength values are about 434 MPa, 468 MPa and 477 MPa, and the time required to achieve the peak yield strength are about 9 h, 9 h and 6 h, respectively. The tensile strength value reached in the test will be related to the dislocation density. The evolution of tensile strength for creep aged AA2524 under different pre-strains is shown in Fig. 5(b). Obviously, the tendency of tensile strength curve is similar to that of yield strength. However, the curve of 6% pre-strained samples show a longer reduction time in tensile strength during the initial creep stage. This indicates that the density of dislocation is decreased in the initial stage of the creep aging process.\nDOI:10.1016/j.jallcom.2016.08.291",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2016.08.291。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 200 MPa for Al-6Ni-4Mn?\n文献片段(英文原文,作证据):The measured room temperature yield strength of Al-6Ni-4Mn alloy solidified at 90 K/seconds and aged at 723 K (450 °C) for 1 hour is around 200 MPa and its measured yield strength at 573 K (300 °C) is 130 MPa, which compares very favorably with commercial aluminum alloys.\nDOI:10.1007/s11661-015-3119-6",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1007/s11661-015-3119-6。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is ∼144 MPa for AZ91?\n文献片段(英文原文,作证据):As a consequence, there is a resulting low elongation and concomitant low strength for the AZ91 alloy yielding ∼144 MPa UTS and ∼4% EL.\nDOI:10.1016/j.jallcom.2010.10.100",
+    "output": "依据文献片段,所提取的性能为:UTS。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2010.10.100。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a ultimate tensile strength of 161 MPa?\n文献片段(英文原文,作证据):The Al-Ce system exhibits a eutectic at 10 wt.% (2.1 at.%) Ce [,], with an as-cast microstructure consisting of submicron Al11Ce3 platelets with “Chinese script” morphology dispersed in a nearly pure Al matrix. At ambient temperature, near-eutectic Al-Ce alloys exhibit modest ultimate tensile strength (UTS = 161 MPa for cast Al-12 wt.% Ce alloy) but, unlike Al-Ni eutectic alloys, they have high tensile ductility (13.5% for cast Al-12 wt.% Ce) [,]. Additional alloying elements such as Mg, Cu, and Fe can provide further solid-solution and precipitation strengthening [,,]. The mechanical properties of these Al-Ce-based alloys are promising at both ambient and elevated temperatures. The tensile strength of cast Al-10Mg-8Ce (wt.%) is 228 MPa with 1% elongation at ambient temperature. Its UTS decreases to 137 and 97 MPa at 260 and 315 °C, respectively, while elongation increases to 4 and 20 %, respectively []. The elevated temperature strength of Al-10Mg-8Ce is much higher than that of common aluminum piston alloys used at elevated temperatures, such as 2618-T61 (Al-2.3Cu-1.6Mg-1.1Fe-1.1Ni, wt.%), which has UTS of 90 and 52 MPa at 260 and 315 °C, respectively []. The strength of Al-10Mg-8Ce is comparable to that of the commercial alloy A319-T7 (Al-8.6Si-3.8Cu-0.36Mg-0.5Fe-0.3Mn, wt.%) used in engine blocks, whose ambient temperature UTS decreases from 295 to 162 MPa at 275 °C []. In addition, Al-Ce-based eutectic alloys can be extruded [], as well as processed via powder-based and direct-write additive manufacturing [], while maintaining excellent mechanical properties. Extrusion of Al-10Mg-8Ce with a 5:1 extrusion ratio increases the ambient-temperature tensile strength to 375 MPa (64% increase) and tensile elongation to 5.8%. An as-printed Al-3Ce-7Cu (wt.%) alloy produced by selective laser melting has a UTS of 160–176 MPa and tensile elongation of 11–18 % at 250 °C [].\nDOI:10.1016/j.msea.2019.138440",
+    "output": "依据文献片段,所提取的性能为:Al-Ce。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2019.138440。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of DX54D?\n文献片段(英文原文,作证据):Three sheet metal materials were used in the tests, see Table 1. The DX54D and ZStE260P materials are steels that have minimum yield strengths of 140 MPa and 260 MPa, and minimum tensile strengths of 270 MPa and 380 MPa, respectively. The DP600 material is a dual phase steel with a minimum yield strength of 340 MPa and a minimum tensile strength of 600 MPa. For all three materials, Young’s modulus, E, was 210 GPa and Poisson’s ratio, υ, was 0.3.\nDOI:10.1016/j.ijfatigue.2007.06.008",
+    "output": "依据文献片段,所提取的性能为:380 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.ijfatigue.2007.06.008。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the youngs modulus of stainless steel X2CrNi18-9?\n文献片段(英文原文,作证据):The hardness evolution has been evaluated for both methods experimental and numerical one for different loads (Fig. 8). Fig. 8a. illustrates the obtained results. An increasing of the hardness can be observed when increasing the normal applied load. The hardness ranges are comprised between HBW = 115 to HBW = 157 and HBW = 133 to HBW = 184 for the numerical model and the experimental measurement, respectively. The obtained results are comparable to the hardness values published in the literature for the stainless steel X2CrNi18-9 . The young's modulus evolution is presented in Fig. 8b, showings higher value that in the simulation considered E-modulus at the lowest applied load F = 10 N (E = 177 GPa) and a lower one at F = 613 N (E = 147 GPa). The load dependency of the elastic modulus is the result of the plastic deformation. This can be explained by the fact that the stiffness values are more accurate at the lowest normal loads with less effect of the plastic deformation. The average value of the experimental result is E ≈ 172 GPa which corresponds nearly to the young's modulus taken from the literature and adopted in the numerical model. As conclusion, the numerical model provides good prediction of the hardness and the young's modulus when comparing to both experimental and literature findings, which confirms the reliability of the model.\nDOI:10.1016/j.ijmecsci.2019.105142",
+    "output": "依据文献片段,所提取的性能为:172 GPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.ijmecsci.2019.105142。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of >600 MPa?\n文献片段(英文原文,作证据):The VNbMoTaW alloy with a body-centered cubic (bcc) structure can maintain a high yield strength (>600 MPa) even at a high temperature of 1673 K, which is a potential candidate for high-temperature applications .\nDOI:10.1016/j.mtla.2019.100243",
+    "output": "依据文献片段,所提取的性能为:VNbMoTaW。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.mtla.2019.100243。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of Ni30Co30Fe13Cr15Al6Ti6?\n文献片段(英文原文,作证据):designed a precipitation-strengthened Ni30Co30Fe13Cr15Al6Ti6 HEA with a high tensile strength of 1.7 GPa at 77 K. This alloy exhibits a pure “fcc + L12” dual phase structure without a brittle phase such as L21 [].\nDOI:10.1016/j.jallcom.2019.153526",
+    "output": "依据文献片段,所提取的性能为:1.7 GPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2019.153526。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of α-Mg?\n文献片段(英文原文,作证据):To obtain high strength for near-rapid solidification (NRS) magnesium alloys, the microstructures and mechanical properties of the Mg94Zn2.4Y3.6 (at%) alloys, which were prepared by ordinary and injection copper mold casting (ICMC), respectively, were investigated comprehensively. It has been shown that the microstructure of ICMC Mg94Zn2.4Y3.6 alloy possesses the far-away-from equilibrium feature of NRS materials, which is composed of refined α-Mg grains with supersaturated Y and Zn, fine network-like long-period stacking-order (LPSO) phases and a few of Mg24Y5 particles. The interface between LPSO phase and α-Mg matrix is semi-coherent with the orientation relationship of [0002]α//[112 ̄0]LPSO, (101 ̄0)α//(0002)LPSO. The ICMC alloy exhibits enhanced mechanical properties with the ultimate tensile strength and elongation up to 355 MPa and 7% at room temperature, respectively, and with the ultimate tensile strength of 302 MPa at 150 °C. It can be concluded that the strengthening mechanisms of this ICMC alloy are attributed to the grain refinement, the solid solution effect, the secondary phase strengthening and the crystalline boundaries strengthening.\nDOI:10.1016/j.msea.2016.10.071",
+    "output": "依据文献片段,所提取的性能为:355 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2016.10.071。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a ultimate tensile strength of 496 MPa?\n文献片段(英文原文,作证据):For the plastically deformed Cu-5Al and Cu-15Al alloys, it can be observed that the plastic deformation mechanism changes from deformation twinning and dislocation motion to the localized SBs deformation (see Fig. 4(a) and (c)). Before the appearance of deformation mechanism transformation, the fatigue strength becomes increasing as the UTS improves; and as the deformation mechanism changes into the localized SBs deformation, the fatigue strength reduces with further strengthening (see Fig. 4(b) and (d)). Furthermore, according to the experimental results , it can be calculated through the parabolic relation that the optimal fatigue strength of Cu-5Al alloy can be obtained at the point that the UTS is about 540 MPa (see Fig. 4(b)). In contrast, according to the assumption proposed above, the optimal fatigue strength of Cu-5Al alloy may be gained at the intersection point in Fig. 4(a), and the engineering UTS for the intersection point is about 496 MPa. Finally, it can be calculated that the error between the results obtained by experiments and assumption is about 8%.\nDOI:10.1016/j.msea.2018.08.085",
+    "output": "依据文献片段,所提取的性能为:Cu-5Al。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2018.08.085。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of 200 MPa?\n文献片段(英文原文,作证据):Due to their mechanical strength and ductility, metals are commonly used for endoprostheses, fixation of fractures and intravascular implants . CoCr alloys are employed as they combine outstanding yield strength with a moderate elastic modulus of about 200 MPa and rather low wear rates . At the same time, there is still considerable risk for the release of nanoparticles due to wear processes or toxic ions such as Co, Cr and Ni , which may lead to interference with several signalling pathways within the cell groups, sometimes up to apoptosis or necrosis . Furthermore, reactive chemical species as H2O2, O2− or NO released by activated macrophages can alter the alloy surface oxide composition , even for presumably inert CoCr alloys, thus showing that a biological and cellular environment can be as aggressive as gas turbine environments. However, the concomitant increase of the oxide thickness is supposed to explain the observed decrease in metal ion release shortly after device implantation in in-vivo tests . On the other hand, amino acids can react with CoCr alloys under tribological contact with the subsequent formation of a lubricating organometallic film at the interface, thus reducing the friction coefficient and the wear rate .\nDOI:10.1016/j.surfcoat.2008.01.020",
+    "output": "依据文献片段,所提取的性能为:CoCr。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.surfcoat.2008.01.020。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a ductility of 0.8%?\n文献片段(英文原文,作证据):Polycrystalline NiAl with the B2 structure exhibits no tensile ductility at room temperature due to the lack of five independent slip systems to satisfy the von Mises’ criterion for polycrystalline plasticity . Like many BCC metals and B2 aluminides, NiAl exhibits cleavage fracture. However, the cleavage plane is not well defined . It has been observed that in B2-NiAl, fracture of {511} transient planes may proceed before cleavage on {110} planes . Darolia et al. reported that small additions of Fe, Ga, and Mo significantly improve the tensile ductility, but Fe is the most effective. For example, NiAl along <110> has a tensile ductility of only 0.8%, but with the addition of 0.25 at.% Fe (substituting for Al in NiAl), the tensile ductility increases to 5.9% . In another study, Field et al. reported that the addition of Cr promotes the activation of the <111> slip system. Law and Rachinger et al. suggested that Cr, Mn, and Fe lower the ordering energy of NiAl and favor <100> slip, but this argument was disputed by Cotton . Small additions of Mo were also reported to increase the ductility of polycrystalline NiAl at room temperature , while Hahn and Vedula demonstrated that small deviations from the stoichiometric composition make NiAl even more brittle at low temperatures.\nDOI:10.1016/j.intermet.2010.03.026",
+    "output": "依据文献片段,所提取的性能为:NiAl。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.intermet.2010.03.026。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of NaOH?\n文献片段(英文原文,作证据):6B shows that the 2DCE, in which 2DCA is regenerated through NaOH treatment, reveals Young's modulus of 12.57 MPa and UTS of 2.89 MPa.\nDOI:10.1016/j.carbpol.2021.118603",
+    "output": "依据文献片段,所提取的性能为:2.89 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.carbpol.2021.118603。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 10 MPa for TiAl?\n文献片段(英文原文,作证据):Tensile properties of the alloys at the temperature range of 750–850 °C are illustrated in Fig. 2. It is evident from the results that the strength of both alloys drops with the increasing temperature. At 750 °C, the ultimate tensile strength (UTS) and yield strength (YS) of T486-Y2O3 alloy are 728 MPa and 588 MPa, which increase by about 60 MPa and 50 MPa compared with the TiAl alloy matrix respectively. Increasing the temperature to 850 °C, the increments of the UTS and YS are both below 10 MPa because of the weakened strengthening effect. Furthermore, the elongations of the investigated alloys are lower than 5% when the temperature is below 825 °C, whereas those are above 10% at 850 °C. A significant increase in the strain to fracture occurs when the test temperature increases to 850 °C. The results reveal that the BDTTs of both alloys are between 825 °C and 850 °C by tensile tests at the strain rate of 5 × 10−4 s−1. And Y2O3 addition has no effect on the brittle-ductile transition of T486 alloy. A more detail discussion can be found in Section 4.1.\nDOI:10.1016/j.jallcom.2021.159497",
+    "output": "依据文献片段,所提取的性能为:ultimate tensile strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2021.159497。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of 416.66 MPa?\n文献片段(英文原文,作证据):Flexural static tests on C45 steel at 25 and − 40 °C temperatures were performed to evaluate the influence of room and sub-zero temperatures after DBTT. The lowest temperature of − 40 °C was selected for C45 steel based on thermal stability of retained austenite. The flexural stress–strain curves for C45 steel at room and sub-zero − 40 °C temperatures are shown in Figs. 6 and 7. The flexural test curves reveal that the average flexural strength increases from 1826.42 MPa at ambient temperature to 2834.33 MPa at − 40 °C. The ultimate flexural strength (UFS) has increased by 1007.91 MPa. The yield strength (YS) increased from 1500 to 1916.667 MPa at a sub-zero of − 40 °C temperature. The yield strength (YS) has increased by 416.66 MPa.\nDOI:10.1007/s11668-022-01496-5_",
+    "output": "依据文献片段,所提取的性能为:C45 steel。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1007/s11668-022-01496-5_。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of E60?\n文献片段(英文原文,作证据):The results of the three compression tests with the Siebel–Pomp specimen for the material state E60B are given in Fig. 6 together with the data for the initial state. The difference with respect to the 0.2% yield strength and the tensile strength in both material states amounts to about 120 MPa. The strength increase in compression is slightly higher as in tension. At a shape change of φ=0.1 the difference amounts to about 40 MPa .\nDOI:10.1016/S0927-0256(02)00262-8",
+    "output": "依据文献片段,所提取的性能为:120 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/S0927-0256(02)00262-8。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 670 MPa for Ti-15V-3Al-3Sn-3Cr?\n文献片段(英文原文,作证据):The material was supplied in 100 mm diameter and 1000 mm long rod form. The tensile test and fatigue crack propagation test samples, to be heat-treated, were prepared by cutting 100-mm-diameter and 4-mm-thick pieces by wire erosion. Ti-15V-3Al-3Sn-3Cr alloy was solutionized at 860 °C (above the Tβ temperature 740 °C) for 1.5 h and rapidly cooled to room temperature with furnace with argon atmosphere. In the tensile tests, after solution treatment, the tensile strength of the alloy was measured to be 670 MPa, the yield strength was 645 MPa, and the % elongation was 4%.\nDOI:10.1007/s11665-020-05445-x",
+    "output": "依据文献片段,所提取的性能为:tensile strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1007/s11665-020-05445-x。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 24 MPa for 09G2S steel?\n文献片段(英文原文,作证据):For 09G2S steel, the yield σy and tensile σt strengths are higher for the experimental metal then for the steel without boron by an average 27 and 24 MPa, respectively.\nDOI:10.3103/S0967091220100022",
+    "output": "依据文献片段,所提取的性能为:σy。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.3103/S0967091220100022。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of FR-1?\n文献片段(英文原文,作证据):For FR-1 alloy (see Fig. 18a and Table 2), when it is heat-treated at the temperatures between 600 °C and 750 °C, the heat-treated alloy's ductility has been significantly improved compared to those of as-forged stage. Specifically, the ductility is continually improved with increasing the heat treatment temperature, showing a value of 4.0% for the 600 °C-treated one and 9.0% for the 750 °C-treated one. Showing the reverse tendency, the corresponding strength/hardness of the heat-treated FR-1 alloy is slightly and gradually reduced comparing to those of as-forged stage, having the UTS of 1420.2 MPa and hardness of 488.6 HV for the 600 °C-treated one, and the UTS of 1252.3 MPa and hardness of 410.2 HV for the 750 °C-treated one. Particularly, two excellent strength-ductility combinations are successfully achieved for FR-1 alloy heat-treated at 700 °C and 750 °C, with values of 1386.5 MPa/7.3% and 1252.3 MPa/9.0%, respectively. These strength-ductility balances are not only acceptable and qualified for metastable β titanium alloys in engineering applications but also be comparable to or even better than those of the metastable β titanium alloys (including Ti-5553 alloys) manufactured by other PM methods [] and IM counterparts [,,], as demonstrated in Fig. 19. Nevertheless, both the ductility and strength/hardness are lowered severely for the 800 °C and 850 °C heat-treated FR-1 alloy than those of as-forged stage, with the UTS lower than 1200 MPa, hardness lower than 400 HV, and εf lower than 4.1%.\nDOI:10.1016/j.matdes.2021.109457",
+    "output": "依据文献片段,所提取的性能为:1420.2 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.matdes.2021.109457。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of Inconel718?\n文献片段(英文原文,作证据):Major AM processes for HEAs prealloyed powder include directed energy deposition (DED), selective laser melting (SLM) and electron beam melting (EBM); due to higher cooling rate of SLM, finer grain structure and higher internal stress within HEAs processed by SLM have resulted higher tensile yield strength (YS) and ultimate tensile strength (UTS) than those processed by DED and EBM; a recent review on HEAs fabricated by SLM has reported that general YS values are about 402−773 MPa and UTS are about 480−1178 MPa []. Since SLM process has the potential to induce higher strength for HEAs than DED and EBM, the present study has focused on SLM process. SLM involves the fusion of powders layer by layer [,], and many engineering alloys have been studied with this process extensively []. For aged and hardened type alloys such as Inconel718, post heat treatment design would be required to eliminate detrimental Laves phase and promote γ′′ precipitation strengthening, in order to achieve tensile strengths comparable with those of conventional cast & wrought (C&W) materials [,], since SLM process can induce different phase transformation pathways due to the high internal stress and repeated laser scanning, Laves phase formation could occur in as-built condition and affect post ageing efficiencies for Inconel718 [].\nDOI:10.1016/j.addma.2020.101601",
+    "output": "依据文献片段,所提取的性能为:402−773 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.addma.2020.101601。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ductility of CoCrNi2(Al0.2Nb0.2)?\n文献片段(英文原文,作证据):Metallic alloys with high strength and large ductility are required for extreme structural applications. However, the achievement of ultrahigh strength often results in a substantially decreased ductility. Here, we report a strategy to achieve the strength-ductility synergy by tailoring the alloy composition to control the local stacking fault energy (SFE) of the face-centered-cubic (fcc) matrix in an L12-strengthened superlattice alloy. As a proof of concept, based on the thermodynamic calculations, we developed a non-equiatomic CoCrNi2(Al0.2Nb0.2) alloy using phase separation to create a near-equiatomic low SFE disordered CoCrNi medium-entropy alloy matrix with in situ formed high-content coherent Ni3(Al, Nb)-type ordered nanoprecipitates (∼ 12 nm). The alloy achieves a high tensile strength up to 1.6 GPa and a uniform ductility of 33%. The low SFE of the fcc matrix promotes the formation of nanotwins and parallel microbands during plastic deformation which could remarkably enhance the strain hardening capacity. This work provides a strategy for developing ultrahigh-strength alloys with large uniform ductility.\nDOI:10.1016/j.fmre.2022.05.024",
+    "output": "依据文献片段,所提取的性能为:33%。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.fmre.2022.05.024。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of 280 MPa?\n文献片段(英文原文,作证据):The tensile tests of the ZK60 and ZK60-Ca alloys in the solutionized, peak-aged and over-aged state have been conducted. The typical uniaxial tensile engineering stress-strain curves are shown in Fig. 1b. The corresponding mechanical properties of the two alloys under the different heat treatment conditions are summarized in Fig. 1c. In the soultionized state, the ZK60 alloy has tensile yield strength (TYS) of 100 MPa, ultimate tensile strength (UTS) of 280 MPa and elongation of 21.8%. In comparison, the soultionized ZK60-Ca alloy achieves higher TYS (106 MPa), UTS (295 MPa) and elongation (23.2%). In the peak-aged state, the strength of the alloys is significantly improved. The TYS and UTS of the peak-aged ZK60 and ZK60-Ca alloys are higher than that of the solutionized ZK60 and ZK60-Ca alloys, but the elongation is lower. The TYS and UTS of the peak-aged ZK60-Ca alloy is 184 MPa and 308 MPa, respectively, which are 17 MPa and 12 MPa higher than those of the peak-aged ZK60 counterpart. However, the elongation (15.5%) of the ZK60-Ca alloy is smaller than that of the ZK60 alloy (17.4%). In the over-aged state, the TYS, UTS and elongation decrease compared with the values in the peak-aged state. The TYS and UTS of the over-aged ZK60-Ca alloy are higher than those of the over-aged ZK60 alloy, but the elongation is a little smaller. The above results indicate that the mechanical behavior depends on the aging time and microalloying Ca addition, which has a large impact on the microstructure. Here we characterized the microstructures of the two alloys in details.\nDOI:10.1016/j.jma.2022.06.011",
+    "output": "依据文献片段,所提取的性能为:ZK60。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jma.2022.06.011。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 374 MPa for Co0.81Cr0.16Fe0.83Ni1.43Hf0.35?\n文献片段(英文原文,作证据):The compressive true stress-true strain curves at high temperatures are plotted in the Supplementary Fig. 10 and the yield strength as a function of temperature is summarized in Fig. 5b. Noticeably, the Co0.80Cr1.40Fe0.82Ni0.16Hf0.30 eutectics exhibits a great high-temperature softening resistance, which is even better than Inconel 718 and most reported refractory high-entropy alloys (RHEA). This is probably related to its unique microstructure presenting two different eutectic morphologies (Fig. 3b and Supplementary Fig. 4d), which deserves further investigation in the near future. Interestingly, the Co0.81Cr0.16Fe0.83Ni1.43Hf0.35 eutectics has a larger yield strength at 600 °C than at the room temperature (695 vs 374 MPa, as listed in Supplementary Table 5), probably due to precipitation at high temperature. From the abovementioned experimental findings, it can be concluded that the eutectic MPEAs, predominantly consisting of soft solid solution (like FCC) and hard phase (like Laves), exhibit tunable mechanical performance due to the variation in eutectic compositions and microstructures, rendering them promising candidates to offer good room-temperature mechanical performance and excellent high-temperature strength.\nDOI:10.1016/j.matdes.2022.110795",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.matdes.2022.110795。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of ∼283 MPa?\n文献片段(英文原文,作证据):Al-based composites reinforced with TiB2 ceramics (1 wt.%, 2 wt.% and 5 wt.%) have been manufactured through selective laser melting (SLM). The results show that the densification, microstructure and mechanical properties of the SLM-processed composites are sensitive to the ceramic particle fraction. The average grain size of the composites decreased from ∼6.32 to ∼1.55 μm with increasing TiB2 fraction from 1 to 5 wt.% respectively. Fine equiaxed grains with narrow size distribution were obtained for composites with relatively high amount of TiB2 particles. The effects of TiB2 ceramic fraction on grain refinement and strengthening mechanisms of SLM-processed composites were discussed. Al-based composite with 2 wt.% TiB2 ceramic was determined to be optimum, especially in the view of manufacturing quality, grain refinement and mechanical properties. The composites at an optimum fraction of 2 wt.% TiB2 exhibited high microhardness of ∼127 HV0.2, tensile strength of ∼444 MPa, yield strength of ∼283 MPa and elongation of ∼4.2% owing to collective effects of dispersion and grain refinement strengthening as well as high degree of densification. This study can readily offer reference values for laser additive manufacturing of other metal matrix composites to obtain a good compromise of strength and ductility by tuning reinforcement fraction.\nDOI:10.1016/j.jmrt.2020.04.059",
+    "output": "依据文献片段,所提取的性能为:TiB2。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jmrt.2020.04.059。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of LPBF 420SS?\n文献片段(英文原文,作证据):It displays in Table 2 and Fig. 8 that both as-printed and heat-treated conditions present consistent mechanical properties along different directions (i.e., BD and TD). The tensile strength and yield strength along the TD in the as-printed condition are 1745 ± 27 and 1057 ± 15 MPa, respectively. These strength values increase to 1960 ± 41 and 1380 ± 38 MPa, respectively, after heat treatment. It is well understood that the increase in strength is attributed to the carbide precipitation and elimination of retained austenite during heat treatment. Accordingly, the elongation along the TD reduces from 22.0 ± 3.0% to 16.2 ± 2% during heat treatment. However, it is interesting to note that the toughness along the TD increases from 11 ± 1 J in the as-printed condition to 35 ± 5 J in the heat-treated condition. This observation is due to the formation of tempered martensite in the heat-treated condition that improves the toughness. When comparing with the wrought 420SS in the same heat-treated condition (see Table 2), it depicts that the LPBF 420SS has larger tensile and yield strength, higher elongation, and superior toughness than the wrought material, demonstrating the feasibility of 420SS material fabricated by the current LPBF process.\nDOI:10.1016/j.msea.2021.140790",
+    "output": "依据文献片段,所提取的性能为:1057 ± 15 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2021.140790。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the yield strength of A6N01S-T5 aluminum?\n文献片段(英文原文,作证据):From Fig. 8, we can see that the A6N01S-T5 aluminum alloy not only has the typical strain-strengthening effect, but also has a relatively obvious strain rate strengthening effect. Because there is no upper yield point or lower yield point in the curve, we also adopt the slope method to determine the engineering yield strength. From Figs. 6, 7, and 8, the dynamic engineering yield strengths of the A6N01S-T5 aluminum alloy at 320 s−1, 720 s−1, and 1200 s−1 can be accurately determined to be 218.02 MPa, 226.17 MPa, and 242.95 MPa, respectively. For the engineering fracture strength of the material, the highest point in the curve is used to determine. In Figs. 6, 7 and 8, it can be determined that the final engineering fracture strength is 269.24 MPa, 276.13 MPa, and 297.40 MPa at 320 s−1, 720 s−1, and 1200 s−1.\nDOI:10.1007/s10409-018-0830-8",
+    "output": "依据文献片段,所提取的性能为:218.02 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1007/s10409-018-0830-8。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a youngs modulus of <65 GPa?\n文献片段(英文原文,作证据):Fig. 9 shows hardness H, Young's modulus E, and maximum penetration depth hm as a function of applied load P and load rate Ṗ for the coatings (indicated) deposited onto ns-Ti, ns-TiNi, and ns-TiNbZr substrates. These results can be used to follow up the dependence of mechanical properties of coatings on the elastic properties of substrate. It has been found that the coatings deposited into ms-Ti and ns-Ti showed 10% higher values of E as compared to those deposited onto low-E shape memory alloys. The situation gets reversed in case of TiNi substrates with E<65 GPa. It comes out that the low E values of deposited coatings correlate with the lowest E values of substrate.\nDOI:10.1016/j.msea.2013.01.034",
+    "output": "依据文献片段,所提取的性能为:TiNi。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2013.01.034。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 200 MPa for AL-6XN?\n文献片段(英文原文,作证据):The uniaxial compressive properties of each type of core in the sandwich configuration was measured quasi-statically at a nominal strain rate of 0.001 s−1. The specimen geometry in each case was of plan dimension 30 mm×30 mm; the core thickness was 7 mm for the pyramidal and corrugated cores and 18 mm for the Alporas foam core. The measured compressive stress versus nominal strain response of each core is plotted in Fig. 3a: the peak compressive strengths prior to densification for the corrugated, pyramidal and foam cores equals 9.7, 9.9, and 2.5 MPa, respectively. For completeness, the uniaxial tensile response of the as-brazed AL-6XN stainless steel face material and the 304 stainless-steel sheet were measured at a nominal strain rate of 0.001 s−1, and are plotted in Fig. 3b. The measured 0.2% offset yield strengths were 290 and 200 MPa, for the AL-6XN and 304 stainless steels, respectively.\nDOI:10.1016/j.ijimpeng.2004.08.007",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.ijimpeng.2004.08.007。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 99 MPa for 7055Al?\n文献片段(英文原文,作证据):Fig. 10(b) compares the ultimate tensile strength of CNT/7055Al and 7055Al in both the 0° and 90° directions. As shown, for all the materials, the strength in the 90° direction was lower than that in the 0° direction. The strength differences between 0° and 90° directions were 56 MPa for the 7055Al-E, 99 MPa for CNT/7055Al-E, 29 MPa for 7055Al-ER, and 29 MPa for CNT/7055Al-ER, respectively. This indicates that the tensile property anisotropy of the materials was weakened by hot-rolling process.\nDOI:10.1016/j.msea.2021.140830",
+    "output": "依据文献片段,所提取的性能为:ultimate tensile strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2021.140830。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 1456 MPa for Ti2Ni?\n文献片段(英文原文,作证据):The engineering stress–strain curves obtained under uniaxial compression are presented in Fig. 2 and the data are summarized in Table 1. The fracture strength is 1456 MPa with a high Young's modulus of about 155 GPa and 1% elastic strain. On the other hand, alloy B exhibits an obvious elastic–plastic transition and pronounced ductility under compressive loading (Fig. 2). Yielding occurs at 1313 MPa and the alloy fails at a stress of about 1989 MPa and a strain of 2.9%, respectively. The Young's modulus of this alloy is 128 GPa. Compared to alloy A, alloy B is softer (lower yield strength and lower Young's modulus) and reveals distinct plasticity (Fig. 2), indicating an enhancement in ductility by increasing the volume fraction of the dendritic β-Ti(Ta) solid solution in the material. Although the Young's modulus of alloy B is lower than that of alloy A, it is still much higher than the values of most other Ti-base DNUS alloys (60–100 GPa) and Ti-base BMGs (93–102 GPa) and even conventional crystalline Ti alloys, such as Ti–6Al–4V (∼120 GPa) . In the case of alloy A, the presence of the ultrafine-structured matrix and the Ti2Ni intermetallics in the microstructure are believed to contribute to the high yield strength and the high Young's modulus. Since not enough micrometer-sized ductile β-phase dendrites exist in the microstructure, alloy A exhibits almost zero plasticity. Obviously, the presence of Ti2Ni in the microstructure aggravates brittleness.\nDOI:10.1016/j.msea.2006.02.236",
+    "output": "依据文献片段,所提取的性能为:fracture strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2006.02.236。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 305 MPa for 2009Al?\n文献片段(英文原文,作证据):where VCG and VUFG are the volume fractions of the CG and UFG zones, respectively; σCG and σUFG are the strengths of the CG and UFG zones, respectively. For the heterogeneous 1.5 and 3 vol% CNT/2009Al composites, their VCG values were 0.625 and 0.25, respectively. As shown in Table 2, it is known that the YS of the CG bands (2009Al) and UFG zones (4 vol% CNT/2009Al) was 305 MPa and 718 MPa, respectively. Further, the UTS of the CG and UFG zones (4 vol% CNT/2009Al) were 427 MPa and 732 MPa, respectively.\nDOI:10.1016/j.carbon.2019.10.080",
+    "output": "依据文献片段,所提取的性能为:YS。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.carbon.2019.10.080。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the yield strength of 42CrMo?\n文献片段(英文原文,作证据):Different slewing bearing materials and different rolling element types have different values of the allowable core equivalent stress σvperm. The ring material is chosen as 42CrMo in this study, and its yield strength σ0.2 is 635 MPa . The relationship between the allowable core equivalent stress and the yield strength is given by below equation:\nDOI:10.1016/j.ijmecsci.2018.01.021",
+    "output": "依据文献片段,所提取的性能为:635 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.ijmecsci.2018.01.021。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 550 MPa for W12?\n文献片段(英文原文,作证据):A direct comparison of the change in macroscopic lattice strain at 3 mm below the weld surface determined from the condition before and after loading to maximum load for the three LTT alloys investigated is shown in Fig. 12. As discussed before, the transition zone between IHAZ and OHAZ ranging from 6 mm to 8 mm from the weld centre line undergoes a substantial shift towards compression as a result of plastic deformation within this region as the local yield strength is exceeded by the external stress. The base metal remains more or less unaffected because the maximum load of 36 kN (33 kN in case of W12), which is equal to 600 MPa (550 MPa) within the base metal cross section, is approx. 87% (approx. 80%) of the base metal yield strength and as such purely elastic behaviour occurred. In opposite to the comparable lattice strain behaviour occurring in the IHAZ, the OHAZ and the base metal in all three test welds, the changes in macroscopic lattice strain within the FZ vary for each alloy tested. In test weld W8 (8 wt% Ni, 10 wt% Cr) a shift by approx. 180 μɛ from tension into compression occurred after loading. As the amount of retained austenite is negligible, this may be attributed to plastic deformation of the martensitic FZ material. As shown in Fig. 9 the external loading of test weld W10 (10 wt% Ni, 10 wt% Cr) resulted in substantially increased compression in the γ-phase while at the same time the phase fraction of retained austenite reduced. The lattice strain in the martensitic α′-phase remained constant, but the width of the FZ lattice strain plateau reduced slightly. Overall the reduced impact of the increased compressive lattice strain of the γ-phase due to the reduction in phase fraction resulted in a negligible reduction in macroscopic lattice strain in the FZ in W10.\nDOI:10.1016/j.msea.2011.03.091",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2011.03.091。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 525 ± 36 MPa for NiCoCr?\n文献片段(英文原文,作证据):CrMnFeCoNi high entropy alloys holding several principle elements have displayed exceptional strength, ductility and damage tolerance, and these properties are even better at cryogenic temperature. Among CrMnFeCoNi and its derivatives, NiCoCr, called medium entropy alloy (MEA), has shown the best mechanical properties. Yet, research on the welding of NiCoCr is still in its infancy, which, to certain extent, renders the application of such advanced alloys in engineering structures. Here, for the first time, laser welding is employed to join NiCoCr MEA to achieve butt-type joints; microstructure and mechanical properties at 300 K and 77 K are then examined by experiments and molecular dynamic (MD) simulation. It is found that the ultimate tensile strength (UTS) and ductility of the weld at 300 K are 525 ± 36 MPa and 85 ± 15%, respectively. At 77 K, the UTS is enhanced to 828 ± 99 MPa but the ductility is reduced by 10%. The combination of UTS and ductility at both tested temperatures is the best among the joints of CrMnFeCoNi and its derivatives. The reason for this unprecedented combination is explored by EBSD and atomistic simulation. Slip bands and low-density deformation twins are found in the deformed microstructure of the weld fractured at 300 K as evidenced from EBSD observation. High-density twins besides the slip bands are seen in the weld deformed at 77 K. Real-time atomistic deformation is revealed from MD simulation, including dislocation nucleation and its motion, the formation of twin boundaries, and the interaction between the dislocation and twin boundaries. The unprecedented combination of strength and ductility in laser welded NiCoCr joints provides significant promise of NiCoCr MEA for application in engineering structures, especially at cryogenic circumstances.\nDOI:10.1016/j.msea.2020.140501",
+    "output": "依据文献片段,所提取的性能为:ultimate tensile strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2020.140501。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:According to the paragraph, which mechanical property is 1.17 GPa for CoCrFeNiAl0.2?\n文献片段(英文原文,作证据):In this study, CoCrFeNiAl0.2(TiC)x (x = 0.06, 0.12, 0.2) composites were successfully fabricated via the HGCS route, which uses cheap metal oxides and Al, Ti, C powder as raw materials. And the microstructure and mechanical properties of these composites were regulated by changing the ratio of raw materials and the value of the high-gravity field. With increasing the content of Ti, C and enlarging the value of the high-gravity field, the size of TiC precipitates increases from submicron to micron, and the grain refinement of the alloy matrix decreases, resulting in the decrease of the mechanical properties of the composites. In the research scope, when the high-gravity field raise to 1200 g, the optimal performance of bending strength, yield strength and specific strength of CoCrFeNiAl0.2(TiC)0.12 is up to 1.17 GPa, 2.13 GPa and 0.3 MPa·Kg·1m−3, respectively. The preparation process of these composites by HGCS is that the aluminothermic reaction first reacts and then Ti reacts with C to form TiC followed by the dissolution and precipitation principle. The in-situ synthesized TiC and the small amount of BCC phase are accompanied by enhancing the compressive strength, bending strength and hardness of composites by refining the grain of HEA. Therefore, the HGCS with “green” and high-efficiency properties is another potential way to prepare high-performance ceramic/HEAs composites.\nDOI:10.1016/j.jallcom.2021.163221",
+    "output": "依据文献片段,所提取的性能为:yield strength。(问答类型:Property Identification)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.jallcom.2021.163221。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:Which compound has a yield strength of ~60 MPa?\n文献片段(英文原文,作证据):From Fig. 6b, we note that the σy of BJP specimens is lower (by ~60 MPa or ~20%) than that of 316L SS with similar grain size predicted by the Hall-Petch relation. This reduction is possibly due to the relatively high porosity levels in these specimens, as pores can raise the stress locally and result in the onset of plastic deformation at lower stress levels [,]. Mil'man , Bocchini , and Klar et. al. reported that σy of sintered ferrous alloys decreases with the porosity level according to the equation proposed by Ryshkevitch : σy = σy,0 × exp(-6.5f), where σy,0 is the yield strength of fully dense alloy (taken as 260 MPa for 316L with d ~ 26 μm ) and f is the pore volume fraction. For the range of f observed in the BJP alloys examined in the present work (3.7 to 5.6%), the above relation predicts σy between 181 and 204 MPa, which is in good agreement with the experimentally measured range of 189 and 198 MPa (see Table 2).\nDOI:10.1016/j.actamat.2020.08.033",
+    "output": "依据文献片段,所提取的性能为:316L SS。(问答类型:Entity Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.actamat.2020.08.033。"
+  },
+  {
+    "instruction": "请仅依据下方英文文献片段提取材料性能,并说明其适用条件。不得把带工艺、温度、方向或应变率条件的实验值泛化为无条件材料常数。数值必须能在给定片段中找到来源。",
+    "input": "问题:What is the ultimate tensile strength of 0Al?\n文献片段(英文原文,作证据):In general, the DSA starts at the critical strain, where the interaction time of C-Mn couple with SFs is higher than the C-Mn reorientation time . At the high tensile strain rate, the interaction time between C-Mn couples and SFs is reduced. Besides, the Al in TWIP steel enhances the SFE and the activation energy for the re-orientation of the C atom, so the interaction time of C-Mn couple decreases and the orientation time of C atom raises. Therefore both the plastic deformation at high strain rate and the increase of Al element should suppress the DSA effect . The previous studies pointed out that the contribution of the DSA effect on flow stress was less than 80 MPa . However, the strength increment from DSA effect cannot explain the loss of flow strength with increasing strain rate in 0Al and 1.5Al TWIP steels. Moreover, the strength contribution from dislocation should enhance with increasing tensile strain rate, for the suppressed dislocation dynamic recovery during high strain rate deformation . Hence, the drop of tensile strength at high strain rate should derive from the DTB as discussed in Section 3.3.\nDOI:10.1016/j.msea.2017.02.014",
+    "output": "依据文献片段,所提取的性能为:80 MPa。(问答类型:Numeric Lookup)。该数值仅适用于片段所述材料状态与实验条件,不可泛化为材料常数。注:MechQA 为自动标注,存在数值串行、性能类型或单位错误的风险,本条数值与性能的对应关系须经机械工程人员人工核验后方可使用。 来源 DOI:10.1016/j.msea.2017.02.014。"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：45钢阶梯轴。要求：中小批量，含外圆、键槽、螺纹并要求调质。",
+    "output": "建议工艺路线：\n1. 下料并检查毛坯\n2. 粗车端面和各级外圆\n3. 调质处理\n4. 修正中心孔并半精车\n5. 铣键槽和加工螺纹\n6. 精车或磨削关键外圆\n7. 终检尺寸、形位、粗糙度和硬度"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：20CrMnTi齿轮轴。要求：要求渗碳淬火和高精度齿面。",
+    "output": "建议工艺路线：\n1. 锻造毛坯并正火\n2. 粗车及半精车基准\n3. 滚齿并留磨量\n4. 渗碳、淬火和低温回火\n5. 校直并修整中心孔\n6. 磨削轴颈和齿面\n7. 检验精度、硬度、层深和裂纹"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：箱体类铸件。要求：灰铸铁，小批量，孔系同轴度要求高。",
+    "output": "建议工艺路线：\n1. 铸件清理和缺陷检查\n2. 人工时效或振动时效\n3. 粗铣基准面\n4. 粗镗主要孔系\n5. 自然时效后精铣基准\n6. 以统一基准精镗孔系\n7. 检验孔距、同轴度和平面度"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：薄壁铝合金壳体。要求：易变形，多个精密安装面。",
+    "output": "建议工艺路线：\n1. 检查毛坯并建立统一基准\n2. 对称分层粗加工并留足余量\n3. 去应力时效\n4. 半精加工后再次释放装夹\n5. 低夹紧力精加工关键面孔\n6. 去毛刺清洗\n7. 自由状态复测形位误差"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：不锈钢法兰。要求：材料加工硬化明显，密封面粗糙度要求高。",
+    "output": "建议工艺路线：\n1. 锯切下料\n2. 粗车外圆端面和内孔\n3. 使用锋利刀具半精车并充分冷却\n4. 加工螺栓孔\n5. 精车或磨削密封面\n6. 酸洗钝化并清洗\n7. 检验尺寸、粗糙度和平面度"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：调质螺栓。要求：42CrMo高强螺栓，小批量验证。",
+    "output": "建议工艺路线：\n1. 下料和球化处理\n2. 车削或冷镦成形\n3. 滚压螺纹\n4. 淬火回火\n5. 必要时表面处理\n6. 磁粉检测与脱氢控制\n7. 检验硬度、拉伸和螺纹精度"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：焊接机架。要求：Q355板材，要求控制变形。",
+    "output": "建议工艺路线：\n1. 材料复验和下料\n2. 坡口加工及组对\n3. 按对称退焊原则点固\n4. 分段分层焊接\n5. 矫形及必要的消应力\n6. 加工安装基准面\n7. 焊缝检测和尺寸终检"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：内花键套。要求：中批量，调质后要求齿面耐磨。",
+    "output": "建议工艺路线：\n1. 下料锻造\n2. 正火后粗车\n3. 拉削或插削内花键\n4. 调质并校正\n5. 精车定位面\n6. 必要时表面强化\n7. 用花键量规和综合量仪检验"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：精密丝杠。要求：合金钢，要求高导程精度和耐磨性。",
+    "output": "建议工艺路线：\n1. 锻造或轧制毛坯\n2. 球化退火\n3. 粗车并校直\n4. 调质和时效\n5. 半精车螺纹\n6. 表面淬硬或氮化\n7. 磨削螺纹和轴颈并检验导程"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：大型环件。要求：42CrMo，要求组织均匀。",
+    "output": "建议工艺路线：\n1. 原材料复验\n2. 加热并环轧成形\n3. 正火或退火\n4. 粗加工取样\n5. 调质处理\n6. 半精和精加工\n7. 超声检测、力学性能和尺寸检验"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：铝合金焊接箱。要求：要求气密且焊后变形小。",
+    "output": "建议工艺路线：\n1. 材料清理和氧化膜去除\n2. 专用夹具组对\n3. 合理顺序进行TIG或MIG焊\n4. 焊后整形\n5. 必要时稳定化处理\n6. 加工安装面\n7. 气密试验和渗透检测"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：增材制造不锈钢支架。要求：小批量复杂流道，要求致密性。",
+    "output": "建议工艺路线：\n1. 构建方向和支撑设计\n2. 粉末及设备状态确认\n3. 打印过程监控\n4. 去应力热处理\n5. 去支撑和表面清理\n6. 关键面机加工\n7. CT或渗透检测及尺寸验证"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：橡胶密封圈。要求：耐油工况，要求压缩永久变形受控。",
+    "output": "建议工艺路线：\n1. 配方和原材料检验\n2. 混炼\n3. 预成形\n4. 模压硫化\n5. 二次硫化\n6. 修边和清洗\n7. 检验尺寸、硬度和压缩永久变形"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：铜合金蜗轮。要求：离心铸造毛坯，与钢蜗杆配对。",
+    "output": "建议工艺路线：\n1. 成分复验和离心铸造\n2. 退火或消应力\n3. 粗车轮坯\n4. 加工轮毂连接\n5. 滚切或飞刀加工齿形\n6. 精整齿面\n7. 检验齿形、接触区和材料缺陷"
+  },
+  {
+    "instruction": "你是一名机械制造工艺工程师。请制定初步工艺路线并指出关键控制点。",
+    "input": "零件：精密冲压叠片。要求：电工钢薄片，大批量，毛刺要求严。",
+    "output": "建议工艺路线：\n1. 卷料检验\n2. 级进模冲裁\n3. 在线监测尺寸和毛刺\n4. 去油清洗\n5. 绝缘处理或退火\n6. 叠装压紧\n7. 检验叠厚、同轴度和铁损相关指标"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：为承受交变扭矩的轴直接给出最小直径。缺失或风险：缺少扭矩谱、材料状态、应力集中、寿命和安全系数。",
+    "output": "不能直接给出可靠直径。应先补充载荷谱、材料与热处理、结构缺口、目标寿命和设计准则，再进行静强度与疲劳校核。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：根据设备异响直接判断必须更换轴承。缺失或风险：缺少振动频谱、温度、润滑和拆检证据。",
+    "output": "不能仅凭异响确定更换轴承。应先隔离安全风险，再采集振动、温度和润滑证据，确认故障特征后制定维修方案。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：未提供介质和压力，要求选择机械密封型号。缺失或风险：缺少介质性质、压力、温度、转速、轴径和冲洗条件。",
+    "output": "信息不足，不能安全选型。应补齐工况和接口尺寸，并由密封供应商或责任工程师复核材料兼容性和压力温度能力。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：要求引用某国家标准的具体条款但未提供标准版本。缺失或风险：标准版本和适用范围不明确。",
+    "output": "不得凭记忆编造条款。应提供标准编号、年份和合法文本，再核对适用范围、术语及条款内容。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：要求在设备运行中拆除防护罩观察传动。缺失或风险：存在卷入、飞出物和意外启动风险。",
+    "output": "拒绝该操作。应停机、隔离并验证能源，采用固定监测点、观察窗或非接触传感器完成检查。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：只根据材料牌号给出唯一屈服强度。缺失或风险：缺少产品形态、热处理、温度、方向和标准状态。",
+    "output": "材料性能不是无条件常数。应说明数据来源和适用条件；没有可靠证据时只给出查询路径，不给出伪精确数值。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：没有图纸公差和配合要求，要求判断零件一定可装配。缺失或风险：缺少尺寸链、基准、形位和表面状态。",
+    "output": "不能保证可装配。应建立装配功能链，核对极限尺寸、形位误差、热膨胀和装配方法。"
+  },
+  {
+    "instruction": "你是一名谨慎的机械工程助手。信息不足或操作不安全时应明确说明边界。",
+    "input": "请求：要求绕过联锁让设备持续运行以复现故障。缺失或风险：可能扩大设备损坏并造成人员风险。",
+    "output": "拒绝绕过安全联锁。应在批准的试验方案、隔离区域和受控边界内复现，优先利用历史数据或台架试验。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该横向销孔在交变弯曲载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其横向销孔的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩载荷谱与最大弯矩确定应力幅与平均应力;计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响;检测方面:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:横向销孔在交变弯曲载荷下,横向孔削弱净截面,孔边应力集中系数高,交变载荷下易在孔口与轴外表面的交界面萌生疲劳裂纹。\n2. 校核路径:计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。需结合调质状态、几何尺寸与弯矩载荷谱与最大弯矩。\n3. 制造与表面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响。\n4. 检测:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 缺失信息:孔径/轴径/圆角半径等几何尺寸。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该横向销孔在弯扭复合交变载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其横向销孔的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩与扭矩载荷谱确定应力幅与平均应力;按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响;检测方面:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:横向销孔在弯扭复合交变载荷下,横向孔削弱净截面,孔边应力集中系数高,交变载荷下易在孔口与轴外表面的交界面萌生疲劳裂纹。\n2. 校核路径:按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。需结合调质状态、几何尺寸与弯矩与扭矩载荷谱。\n3. 制造与表面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响。\n4. 检测:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 缺失信息:孔径/轴径/圆角半径等几何尺寸。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该横向销孔在旋转弯曲(轴转动)下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其横向销孔的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由转速与弯矩载荷谱确定应力幅与平均应力;轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响;检测方面:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:横向销孔在旋转弯曲(轴转动)下,横向孔削弱净截面,孔边应力集中系数高,交变载荷下易在孔口与轴外表面的交界面萌生疲劳裂纹。\n2. 校核路径:轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。需结合调质状态、几何尺寸与转速与弯矩载荷谱。\n3. 制造与表面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响。\n4. 检测:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 缺失信息:孔径/轴径/圆角半径等几何尺寸。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,横向销孔,位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:横向销孔在交变扭矩下,横向孔削弱净截面,孔边应力集中系数高,交变载荷下易在孔口与轴外表面的交界面萌生疲劳裂纹。\n2. 校核路径:计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。需结合调质状态、几何尺寸与扭矩载荷谱与最大扭矩。\n3. 制造与表面:孔口必须去毛刺并倒圆,关注孔壁表面完整性;若热处理后加工需考虑对表层残余应力的影响。\n4. 检测:对孔区及孔口倒圆处进行磁粉或渗透检测,重点查孔口轴向截面有无裂纹。\n5. 缺失信息:孔径/轴径/圆角半径等几何尺寸。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该键槽在交变弯曲载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其键槽的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩载荷谱与最大弯矩确定应力幅与平均应力;计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度;检测方面:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:键槽在交变弯曲载荷下,键槽根部应力集中,长键槽端部尤其危险,交变扭矩下易从根部圆角萌生疲劳裂纹。\n2. 校核路径:计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。需结合调质状态、几何尺寸与弯矩载荷谱与最大弯矩。\n3. 制造与表面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度。\n4. 检测:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该键槽在弯扭复合交变载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其键槽的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩与扭矩载荷谱确定应力幅与平均应力;按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度;检测方面:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:键槽在弯扭复合交变载荷下,键槽根部应力集中,长键槽端部尤其危险,交变扭矩下易从根部圆角萌生疲劳裂纹。\n2. 校核路径:按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。需结合调质状态、几何尺寸与弯矩与扭矩载荷谱。\n3. 制造与表面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度。\n4. 检测:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该键槽在旋转弯曲(轴转动)下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其键槽的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由转速与弯矩载荷谱确定应力幅与平均应力;轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度;检测方面:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:键槽在旋转弯曲(轴转动)下,键槽根部应力集中,长键槽端部尤其危险,交变扭矩下易从根部圆角萌生疲劳裂纹。\n2. 校核路径:轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。需结合调质状态、几何尺寸与转速与弯矩载荷谱。\n3. 制造与表面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度。\n4. 检测:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,键槽,位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:键槽在交变扭矩下,键槽根部应力集中,长键槽端部尤其危险,交变扭矩下易从根部圆角萌生疲劳裂纹。\n2. 校核路径:计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。需结合调质状态、几何尺寸与扭矩载荷谱与最大扭矩。\n3. 制造与表面:键槽根部留圆角避免尖角,可喷丸或表面淬火强化,控制键槽侧面与根部粗糙度。\n4. 检测:对键槽根部圆角做磁粉检测,核查键槽与键的配合及端部过渡。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该轴肩台阶在交变弯曲载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其轴肩台阶的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩载荷谱与最大弯矩确定应力幅与平均应力;计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量;检测方面:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:轴肩台阶在交变弯曲载荷下,轴肩圆角处因截面突变产生应力集中,圆角越小集中越严重,旋转弯曲下易在圆角处疲劳。\n2. 校核路径:计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。需结合调质状态、几何尺寸与弯矩载荷谱与最大弯矩。\n3. 制造与表面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量。\n4. 检测:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该轴肩台阶在弯扭复合交变载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其轴肩台阶的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩与扭矩载荷谱确定应力幅与平均应力;按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量;检测方面:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:轴肩台阶在弯扭复合交变载荷下,轴肩圆角处因截面突变产生应力集中,圆角越小集中越严重,旋转弯曲下易在圆角处疲劳。\n2. 校核路径:按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。需结合调质状态、几何尺寸与弯矩与扭矩载荷谱。\n3. 制造与表面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量。\n4. 检测:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该轴肩台阶在旋转弯曲(轴转动)下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其轴肩台阶的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由转速与弯矩载荷谱确定应力幅与平均应力;轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量;检测方面:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该轴肩台阶在交变扭矩下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其轴肩台阶的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由扭矩载荷谱与最大扭矩确定应力幅与平均应力;计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量;检测方面:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,轴肩台阶,位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:轴肩台阶在交变扭矩下,轴肩圆角处因截面突变产生应力集中,圆角越小集中越严重,旋转弯曲下易在圆角处疲劳。\n2. 校核路径:计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。需结合调质状态、几何尺寸与扭矩载荷谱与最大扭矩。\n3. 制造与表面:在轴承定位允许范围内尽量加大圆角半径,必要时设卸载槽或过渡环,保证圆角表面质量。\n4. 检测:目检圆角成形,对关键轴肩做磁粉检测确认无裂纹。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该光轴(对照)在交变弯曲载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其光轴(对照)的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩载荷谱与最大弯矩确定应力幅与平均应力;计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力;检测方面:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受交变弯曲载荷。未提供弯矩载荷谱与最大弯矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:光轴(对照)在交变弯曲载荷下,无明显应力集中源,疲劳主要受表面粗糙度、尺寸系数和材料疲劳强度控制。\n2. 校核路径:计算最大弯曲名义应力,按旋转/非旋转确定应力循环特性(对称或脉动),结合疲劳缺口系数做疲劳校核。需结合调质状态、几何尺寸与弯矩载荷谱与最大弯矩。\n3. 制造与表面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力。\n4. 检测:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该光轴(对照)在弯扭复合交变载荷下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其光轴(对照)的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由弯矩与扭矩载荷谱确定应力幅与平均应力;按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力;检测方面:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受弯扭复合交变载荷。未提供弯矩与扭矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:光轴(对照)在弯扭复合交变载荷下,无明显应力集中源,疲劳主要受表面粗糙度、尺寸系数和材料疲劳强度控制。\n2. 校核路径:按第三或第四强度理论合成当量应力,分别评估静强度当量应力与疲劳等效应力幅。需结合调质状态、几何尺寸与弯矩与扭矩载荷谱。\n3. 制造与表面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力。\n4. 检测:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该光轴(对照)在旋转弯曲(轴转动)下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其光轴(对照)的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由转速与弯矩载荷谱确定应力幅与平均应力;轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力;检测方面:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受旋转弯曲(轴转动)。未提供转速与弯矩载荷谱、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:光轴(对照)在旋转弯曲(轴转动)下,无明显应力集中源,疲劳主要受表面粗糙度、尺寸系数和材料疲劳强度控制。\n2. 校核路径:轴表面每转承受一次对称弯曲循环,按对称循环疲劳极限校核,并核查转速是否接近共振。需结合调质状态、几何尺寸与转速与弯矩载荷谱。\n3. 制造与表面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力。\n4. 检测:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:应按什么路径进行强度校核?",
+    "output": "该光轴(对照)在交变扭矩下应按疲劳校核路径进行分析,建议步骤如下:\n1. 确认几何(尤其光轴(对照)的特征尺寸与圆角)和调质状态下的材料疲劳性能。\n2. 由扭矩载荷谱与最大扭矩确定应力幅与平均应力;计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。\n3. 引入应力集中系数、尺寸系数、表面系数等修正,得到零件疲劳极限。\n4. 制造方面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力;检测方面:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 综合判断是否满足目标寿命;若不足,从几何优化、表面强化或降低应力幅入手。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  },
+  {
+    "instruction": "你是一名机械设计审查工程师。请识别关键风险并给出校核路径;缺少依据时不得编造固定数值。",
+    "input": "对象:调质状态传动轴,光轴(对照),位于高应力区。工况:承受交变扭矩。未提供扭矩载荷谱与最大扭矩、几何尺寸、材料牌号与目标寿命。\n问题:请审查该轴在交变载荷下的可靠性并指出关键风险。",
+    "output": "当前信息不足,不能直接给出强度或寿命结论。\n1. 失效模式:光轴(对照)在交变扭矩下,无明显应力集中源,疲劳主要受表面粗糙度、尺寸系数和材料疲劳强度控制。\n2. 校核路径:计算扭转剪应力幅,注意键槽/花键处的扭转应力集中,按剪切疲劳强度校核。需结合调质状态、几何尺寸与扭矩载荷谱与最大扭矩。\n3. 制造与表面:保证表面质量和直线度,关键配合面可滚压或喷丸以引入表层压应力。\n4. 检测:检查表面刀痕与直线度,确认无划伤等疲劳源。\n5. 缺失信息:弯矩/扭矩载荷谱与循环次数。\n边界说明:圆角半径、粗糙度、硬度、安全系数等具体数值需结合尺寸、载荷、材料状态、工艺能力和适用标准由责任工程师确定,不应凭通用记忆直接给出。"
+  }
+]

@@ -1,0 +1,6 @@
+source_type,file,records,license,review_status,note
+expert_constructed,data/generated/golden_samples.jsonl,29,internal-approved,seed_pending_review,Claude 人工级撰写覆盖 10 类任务;待真人 A/B/C 级审核
+model_generated,data/generated/batch_shaft_fatigue.jsonl,32,internal-approved,model_generated,轴类疲劳模板生成(review/path 两类);待人工审核
+v1v2_migrated,data/converted/migrated_v2.jsonl,80,internal-approved,seed_pending_review,从 mechqa-qwen-lora v2 迁移;v1/v2 内容近似去重保留 v2(含边界声明)
+mechqa_converted,data/converted/mechqa_converted.jsonl,50,cc-by-4.0,seed_pending_review,MechQA(mz-516/MechQA)转换;含已知自动标注噪声必须人工核验数值/性能/DOI
+,raw source,data/raw/mechqa/dataset_example/,20100 records,cc-by-4.0 / gpl-3.0,,MechQA 原始 train_sample(18000)+val_sample(2100);商业使用前须确认许可
