@@ -44,7 +44,7 @@ def main():
     # eval -> test / challenge (高风险进 challenge)
     test, challenge = [], []
     for r in evalr:
-        if "high_risk" in (r.get("split_group", "") or ""):
+        if "_hr_" in (r.get("split_group", "") or ""):  # eval_hr_ 为高风险题
             challenge.append(r)
         else:
             test.append(r)
