@@ -1,0 +1,3 @@
+62035f41d501bde6e3dbd07dfb98f60e48ac5a08344e84943de8aacef3e90c2f *README.md
+5ba5f1a655fe30abdb5fb6f3f9e04912fb617ee25ba0f4ee4e736451dcf8a8c5 *musa_tiny_train.py
+769494725db9ee0f4cb1f792383100a83b6c92c6867e9e86c135aa8ba80ba695 *run_gpu_proof.sh
