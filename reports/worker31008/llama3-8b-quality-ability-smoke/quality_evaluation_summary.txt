@@ -1,0 +1,13 @@
+Llama3-8B Model Quality Evaluation
+
+Host: worker31008
+Model: llama3-8b-instruct
+Evaluation time: 2026-07-23 09:08:36
+Evaluator: EvalScope openai_api
+
+Results:
+C-Eval: mean_acc=0.3294, samples=1008
+GSM8K: mean_acc=0.5500, samples=20
+MMLU: mean_acc=0.6210, samples=1140
+
+Note: --limit 20 limited GSM8K; C-Eval and MMLU were evaluated by subset.
