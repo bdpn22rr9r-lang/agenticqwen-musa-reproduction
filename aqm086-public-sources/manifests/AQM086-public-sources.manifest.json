@@ -14,7 +14,7 @@
     "2wiki_train": 0,
     "2wiki_train_note": "167454 records downloaded but dataset license UNCONFIRMED -> not eligible",
     "omni_math": 0,
-    "omni_math_note": "4428 records downloaded but license UNCONFIRMED -> not eligible",
+    "omni_math_note": "4428 rows, license Apache-2.0 CONFIRMED (HF cardData), training_candidate=true but training_eligible=false: still needs AgenticQwen schema conversion + dedup + length + leakage check",
     "synthagent": 0,
     "synthagent_note": "CODE_ONLY; agentic data only on forbidden HF -> not eligible"
   },

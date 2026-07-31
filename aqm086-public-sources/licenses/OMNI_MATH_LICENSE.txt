@@ -1,18 +1,30 @@
 # Omni-MATH - License record for AQM086
 # ============================================================
 # Repository  https://github.com/KbsdJames/Omni-MATH  (commit 23be225)
+# HF card     https://huggingface.co/datasets/KbsdJames/Omni-MATH
 #
-# >>> NO LICENSE FILE IS PRESENT IN THE REPOSITORY <<<
-# The repo has README.md and .gitattributes (LFS pointer rules) but NO
-# LICENSE / COPYING / NOTICE, and the README states no license terms for
-# Omni-Math.jsonl. README describes Omni-MATH as a benchmark for assessing
-# LLM mathematical reasoning; Omni-Math.jsonl (4428 problems) is the problem
-# set (not an evaluation-output file).
+# License: Apache-2.0   (status: CONFIRMED 2026-07-31)
 #
-# -> license_status = UNCONFIRMED
-# -> training_eligible = false   (NOT counted toward the 100K target)
-# -> Author also publishes on Hugging Face, but AQM086 forbids HF as a source.
-# SPDX-License-Identifier: NOASSERTION
+# Source of the license claim:
+#   The HuggingFace dataset card for KbsdJames/Omni-MATH explicitly lists
+#   cardData.license = "apache-2.0" (tag "license:apache-2.0"), verified via the
+#   HF API on 2026-07-31. Accepted as sufficient evidence by the user.
+#
+# IMPORTANT transparency note:
+#   The GitHub repository itself STILL contains NO LICENSE / COPYING / NOTICE
+#   file, and the README states no license terms. The Apache-2.0 claim comes
+#   from the HF dataset card, NOT from a LICENSE file in the repo. If a stricter
+#   standard is required, request an explicit LICENSE file from the upstream
+#   authors.
+#
+# Training status: training_candidate = true, but training_eligible = false
+#   (still needs AgenticQwen schema conversion, dedup, length/null check, and
+#    train/eval leakage check; Omni-MATH is also a benchmark - confirm
+#    intended-use compliance).
+#
+# SPDX-License-Identifier: Apache-2.0
+# Full Apache-2.0 text: http://www.apache.org/licenses/LICENSE-2.0
 # ============================================================
 
-(NO ORIGINAL LICENSE FILE EXISTS IN THE SOURCE REPOSITORY.)
+License status : CONFIRMED (Apache-2.0), evidence = HF dataset card cardData.license.
+GitHub repo    : NO LICENSE file present (recorded transparently).

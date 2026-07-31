@@ -6,19 +6,41 @@
   "repository_commit": "23be225c8e268df51990f6c5c1448f34d3b56911",
   "data_file": "Omni-Math.jsonl",
   "artifact_name": "Omni-Math.jsonl",
-  "artifact_path_or_release_asset": "AQM086-omni-math-Omni-Math.jsonl (planned GitHub Release asset; NOT uploaded - no release token)",
+  "artifact_path_or_release_asset": "AQM086-omni-math-Omni-Math.jsonl (planned Release asset; READY locally)",
   "byte_size": 7504961,
   "line_count": 4428,
   "record_count": 4428,
   "sha256": "7c87be8ee41ac7c7a597ef5a5500e84bd2b639a85a06db3da7f69bf9a32ef168",
-  "license": "NOASSERTION",
-  "license_status": "UNCONFIRMED",
-  "license_note": "Repository has NO LICENSE file; README states no data license terms.",
+  "sha256_status": "MEASURED (verified from downloaded file)",
+  "schema": {
+    "fields": ["domain", "difficulty", "problem", "solution", "answer", "source"],
+    "note": "domain=list[str]; difficulty=float; problem/solution/answer/source=str. problem=question, solution=full reasoning (LaTeX), answer=final answer."
+  },
+  "derived_instruction": {
+    "name": "omni-math.instruction.derived.jsonl",
+    "conversion_script": "scripts/omni_math_to_instruction.py",
+    "byte_size": 7560929,
+    "record_count": 4428,
+    "sha256": "d4fd51c161a7be93ba17481db13917705a7a5d78bafb14a2a35b0332aaa1c31a",
+    "mapping": "problem->instruction, solution->output, answer->answer, {domain,difficulty,source}->meta",
+    "schema_status": "PROVISIONAL (AgenticQwen schema not yet defined in this project)"
+  },
+  "license": "Apache-2.0",
+  "license_status": "CONFIRMED",
+  "license_evidence": "HuggingFace dataset card KbsdJames/Omni-MATH: cardData.license=apache-2.0, tag license:apache-2.0 (verified 2026-07-31). GitHub repo itself has NO LICENSE file.",
+  "license_note": "License Apache-2.0 per HF dataset card (user-accepted as sufficient evidence 2026-07-31). The GitHub repo has no LICENSE file - recorded transparently.",
   "split": "full",
   "intended_use": "reasoning_initial",
   "evaluation_only": false,
+  "training_candidate": true,
   "training_eligible": false,
-  "training_eligible_note": "Blocked on license UNCONFIRMED. Repo README also positions Omni-MATH as a benchmark; confirm intended-use compliance before any training use.",
+  "training_eligible_note": "License now CONFIRMED (Apache-2.0) so it is a training CANDIDATE, but NOT yet training-eligible: still missing final AgenticQwen schema conversion (only provisional done), dedup, length/null check, and train/eval leakage check. Omni-MATH is also a benchmark - confirm intended-use compliance.",
+  "pending_steps_before_training": [
+    "finalize AgenticQwen schema then rerun conversion",
+    "deduplication",
+    "length / null / outlier check",
+    "train/eval leakage check (benchmark; ensure no eval overlap)"
+  ],
   "evaluation_only_artifacts": [
     "GPT_eval/examples/meta_llama_3-1_70b_instruct_gpteval.jsonl",
     "GPT_eval/examples/qwen_2_5_MATH_72b_instruct_gpteval.jsonl",
@@ -26,5 +48,5 @@
     "Omni-Judge_eval/examples_infile/qwen_2_5_MATH_72b_instruct_infile.jsonl"
   ],
   "download_status": "OK",
-  "notes": "Omni-Math.jsonl is the problem set (4428 olympiad problems) and is NOT an evaluation-output file (line_count matches README '4428 problems'). The GPT_eval/* and Omni-Judge_eval/* jsonl are model evaluation outputs -> evaluation_only, must not enter training. Author also publishes on Hugging Face; not used per AQM086 rule 1."
+  "notes": "4428 problems, sha256 MEASURED. License Apache-2.0 (HF card). Provisional instruction-derived generated (sha256 d4fd51c1...). NOT counted toward the 100K eligible total (training_eligible=false, candidate only)."
 }
