@@ -22,7 +22,7 @@ additionally blocked on download (source host unreachable from this network).
 
 | asset | size (B) | sha256 | local source | status |
 |---|---|---|---|---|
-| `AQM086-hotpotqa-hotpot_train_v1.1.json` | ~566 MB | `26650cf50234ef5fb2e664ed70bbecdfd87815e6bffc257e068efea5cf7cd316` (expected, **unverified**) | not downloaded | **BLOCKED** |
+| `AQM086-hotpotqa-hotpot_train_v1.1.derived.json` | 561873108 | `3d72f9fcff621eb9ea59383e13608611d046568a8757951da853e6a6577d5d76` (HF-derived; content-equivalent to CMU, 90,447 rows; NOT byte-identical to `26650cf5…`) | `%TEMP%/aqm086_dl/hotpot_train_v1.1.derived.json` | READY (HF-derived) |
 | `AQM086-2wiki-data_ids_april7.zip` | 258968175 | `95df2bf56fdabe034e27aebc580e02264232203cf52552f9efe8a919e5529eef` | `%TEMP%/aqm086_dl/2wiki_data.zip` | READY |
 | `AQM086-omni-math-Omni-Math.jsonl` | 7504961 | `7c87be8ee41ac7c7a597ef5a5500e84bd2b639a85a06db3da7f69bf9a32ef168` | `%TEMP%/aqm086_dl/omnimath_extracted/.../Omni-Math.jsonl` | READY |
 

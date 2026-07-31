@@ -27,3 +27,22 @@ python ../../scripts/verify_sha256.py hotpot_train_v1.1.json \
   --expected 26650cf50234ef5fb2e664ed70bbecdfd87815e6bffc257e068efea5cf7cd316
 python ../../scripts/count_records.py hotpot_train_v1.1.json   # json-array -> record count
 ```
+
+## ACTUAL acquisition used (HF-derived, user-authorized exception to rule 1)
+
+The official CMU host was unreachable, so **equivalent** data was obtained from
+HuggingFace (explicitly authorized by the user, 2026-07-31):
+
+- Dataset: https://huggingface.co/datasets/hotpotqa/hotpot_qa  (commit `1908d6af`)
+- Split: `distractor/train` (2 parquet shards)
+- Input shards + sha256:
+  - `distractor/train-00000-of-00002.parquet` — 165624177 B — `76d3bb3048a7cc73c1958107c0c5872a00d7e7d00c105b81e92f6769e7822e68`
+  - `distractor/train-00001-of-00002.parquet` — 166162479 B — `713661628434fbb19fff7392e2e321e4ed107e3c7c7784d0690946e5f722763f`
+- Conversion to original json schema:
+  ```bash
+  python ../../scripts/hotpotqa_parquet_to_json.py \
+    train-00000-of-00002.parquet train-00001-of-00002.parquet \
+    -o hotpot_train_v1.1.derived.json
+  ```
+- Derived json: **561873108 B**, **90,447 rows**, sha256 `3d72f9fcff621eb9ea59383e13608611d046568a8757951da853e6a6577d5d76`
+  — content-equivalent to CMU (rows match) but **NOT byte-identical** to the official `26650cf5…`.

@@ -26,3 +26,15 @@ or obtain hotpot_train_v1.1.json through another OFFICIAL channel (NOT a
 third-party mirror, NOT Hugging Face). After download, verify:
   sha256 == 26650cf50234ef5fb2e664ed70bbecdfd87815e6bffc257e068efea5cf7cd316
 then upload as Release asset AQM086-hotpotqa-hotpot_train_v1.1.json.
+
+---
+UPDATE 2026-07-31: User authorized an EXCEPTION to rule 1. Equivalent data was
+obtained from HuggingFace (hotpotqa/hotpot_qa, distractor/train, commit 1908d6af):
+  parquet shard 1: 165624177 B  sha256 76d3bb3048a7cc73c1958107c0c5872a00d7e7d00c105b81e92f6769e7822e68
+  parquet shard 2: 166162479 B  sha256 713661628434fbb19fff7392e2e321e4ed107e3c7c7784d0690946e5f722763f
+Converted to original json schema via scripts/hotpotqa_parquet_to_json.py:
+  hotpot_train_v1.1.derived.json  561873108 B  90447 rows  sha256 3d72f9fcff621eb9ea59383e13608611d046568a8757951da853e6a6577d5d76
+Content-equivalent (90,447 rows match the official count) but NOT byte-identical
+to the CMU original (sha256 differs: 3d72f9fc... vs 26650cf5...). HotpotQA is now
+training-eligible on license (CC-BY-SA-4.0) + data-obtained, SUBJECT TO stakeholder
+confirmation of the HF-source exception. The CMU original remains unobtained.
