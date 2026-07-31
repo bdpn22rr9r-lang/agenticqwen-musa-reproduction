@@ -1,0 +1,18 @@
+# Omni-MATH - License record for AQM086
+# ============================================================
+# Repository  https://github.com/KbsdJames/Omni-MATH  (commit 23be225)
+#
+# >>> NO LICENSE FILE IS PRESENT IN THE REPOSITORY <<<
+# The repo has README.md and .gitattributes (LFS pointer rules) but NO
+# LICENSE / COPYING / NOTICE, and the README states no license terms for
+# Omni-Math.jsonl. README describes Omni-MATH as a benchmark for assessing
+# LLM mathematical reasoning; Omni-Math.jsonl (4428 problems) is the problem
+# set (not an evaluation-output file).
+#
+# -> license_status = UNCONFIRMED
+# -> training_eligible = false   (NOT counted toward the 100K target)
+# -> Author also publishes on Hugging Face, but AQM086 forbids HF as a source.
+# SPDX-License-Identifier: NOASSERTION
+# ============================================================
+
+(NO ORIGINAL LICENSE FILE EXISTS IN THE SOURCE REPOSITORY.)

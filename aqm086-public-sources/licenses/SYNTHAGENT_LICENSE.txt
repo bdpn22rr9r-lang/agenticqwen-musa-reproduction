@@ -1,0 +1,19 @@
+# SynthAgent - License record for AQM086
+# ============================================================
+# Repository  https://github.com/aiming-lab/SynthAgent  (commit bae3603)
+# Paper       https://aclanthology.org/2026.acl-long.716/
+#
+# >>> NO LICENSE FILE IS PRESENT IN THE REPOSITORY <<<
+# The repo has README.md but NO LICENSE / COPYING / NOTICE and no license
+# statement. Public tasks + trajectories are published ONLY on Hugging Face
+# (ChilleD/SynthAgent); AQM086 forbids HF as a source and no non-HF public
+# mirror was found. The GitHub repo ships only code + an eval config
+# (configs/webarena.jsonl).
+#
+# -> data_status = CODE_ONLY
+# -> license_status = UNCONFIRMED
+# -> training_eligible = false   (NOT counted toward the 100K target)
+# SPDX-License-Identifier: NOASSERTION
+# ============================================================
+
+(NO ORIGINAL LICENSE FILE EXISTS IN THE SOURCE REPOSITORY.)

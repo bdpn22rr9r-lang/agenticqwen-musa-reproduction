@@ -1,0 +1,26 @@
+{
+  "source_name": "synthagent",
+  "source_type": "agentic_method",
+  "source_url": "https://github.com/aiming-lab/SynthAgent",
+  "repository_url": "https://github.com/aiming-lab/SynthAgent",
+  "repository_commit": "bae3603e9115cf9de4b317abac1d4a19369601e2",
+  "data_url": "https://huggingface.co/ChilleD/SynthAgent  (FORBIDDEN as a source by AQM086 rule 1; no non-HF public mirror found)",
+  "code_archive": "codeload zip @ commit bae3603 (953830 B)",
+  "code_sha256": "6e639bc69539a2ff7d9c01e24022809c335b460465ec15a9fd38bc7e0b45f52d",
+  "data_sha256": null,
+  "task_count": 0,
+  "trajectory_count": 0,
+  "data_status": "CODE_ONLY",
+  "license": "NOASSERTION",
+  "license_status": "UNCONFIRMED",
+  "license_note": "Repository has NO LICENSE file.",
+  "split": "unknown",
+  "evaluation_only": false,
+  "training_eligible": false,
+  "training_eligible_note": "CODE_ONLY: no public tasks/trajectories obtainable without HF (forbidden). Code files must NOT be counted as training samples.",
+  "evaluation_only_artifacts": [
+    "configs/webarena.jsonl (WebArena evaluation config)"
+  ],
+  "download_status": "OK_CODE_ONLY",
+  "notes": "Repo contains task/environment/tool/refinement code but NOT the synthesized tasks/trajectories - those are on HF only. Per AQM086 rule 1 (no HF) the agentic data is NOT obtainable from an allowed channel, so whether tasks are executable, whether trajectories are refined, and whether env state is present cannot be verified (the data is absent)."
+}

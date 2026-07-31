@@ -1,0 +1,32 @@
+{
+  "source_name": "2wikimultihopqa",
+  "source_type": "reasoning_initial",
+  "source_url": "https://www.dropbox.com/s/ms2m13252h6xubs/data_ids_april7.zip",
+  "repository_url": "https://github.com/Alab-NII/2wikimultihop",
+  "repository_commit": "13800e5be57df1b4040b9b1588c6c811779e69e9",
+  "archive_name": "data_ids_april7.zip",
+  "artifact_path_or_release_asset": "AQM086-2wiki-data_ids_april7.zip (planned GitHub Release asset; NOT uploaded - no release token)",
+  "byte_size": 258968175,
+  "archive_size": 258968175,
+  "archive_sha256": "95df2bf56fdabe034e27aebc580e02264232203cf52552f9efe8a919e5529eef",
+  "archive_integrity": "testzip OK (no corrupt member); no path traversal in any member",
+  "sha256": "95df2bf56fdabe034e27aebc580e02264232203cf52552f9efe8a919e5529eef",
+  "extracted_file_count": 4,
+  "extracted_files": [
+    {"name": "train.json", "size": 707810660, "records": 167454, "split": "train", "evaluation_only": false},
+    {"name": "dev.json", "size": 57614142, "records": 12576, "split": "dev", "evaluation_only": true},
+    {"name": "test.json", "size": 53838398, "records": 12576, "split": "test", "evaluation_only": true},
+    {"name": "id_aliases.json", "size": 17501406, "records": "n/a (JSONL alias map, not training data)", "evaluation_only": true}
+  ],
+  "record_count": 167454,
+  "record_count_split": "train.json only (dev/test excluded as evaluation_only)",
+  "license": "Apache-2.0 (code repo only); dataset NOASSERTION",
+  "license_status": "UNCONFIRMED",
+  "license_note": "Code repo is Apache-2.0, but the data archive contains NO license file. Dataset license must be confirmed separately before training.",
+  "split": "train",
+  "evaluation_only": false,
+  "training_eligible": false,
+  "training_eligible_note": "Blocked on license: dataset license UNCONFIRMED. 167454 train records are available but NOT counted toward 100K until a dataset license is confirmed.",
+  "download_status": "OK",
+  "notes": "train/dev/test cleanly separated. Large archive (~247 MB; train.json 707 MB extracted) must be a Release asset, not a git blob."
+}

@@ -1,0 +1,28 @@
+AQM086 HotpotQA train file download - BLOCKED
+=============================================
+target_url: https://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json
+expected_sha256 (from AQM086 task spec): 26650cf50234ef5fb2e664ed70bbecdfd87815e6bffc257e068efea5cf7cd316
+expected_size: ~566 MB
+expected_records: ~90K (train only; dev/test excluded by policy)
+
+Attempt 1 - via HTTP proxy 127.0.0.1:7897:
+  curl -I -x http://127.0.0.1:7897 --max-time 30 <target_url>
+  result: http=000 ; Connection timed out after 30011 ms (curl exit 28)
+
+Attempt 2 - direct, no proxy:
+  curl -I --noproxy '*' --max-time 30 <target_url>
+  result: http=000 ; Failed to connect to curtis.ml.cmu.edu port 443
+          after 21366 ms (curl exit 28)
+
+Decision: per AQM086 rule "each external source max 2 attempts; after the 2nd
+failure keep a log and mark BLOCKED, do not keep retrying" -> BLOCKED.
+
+hotpotqa-train.manifest.json is recorded with download_status=BLOCKED. The
+dataset license (CC BY-SA 4.0) remains CONFIRMED from the official description,
+but the file itself was NOT obtained and NOT re-hashed.
+
+Human follow-up needed: retry from a network that can reach curtis.ml.cmu.edu,
+or obtain hotpot_train_v1.1.json through another OFFICIAL channel (NOT a
+third-party mirror, NOT Hugging Face). After download, verify:
+  sha256 == 26650cf50234ef5fb2e664ed70bbecdfd87815e6bffc257e068efea5cf7cd316
+then upload as Release asset AQM086-hotpotqa-hotpot_train_v1.1.json.

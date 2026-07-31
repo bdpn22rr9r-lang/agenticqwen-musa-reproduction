@@ -1,0 +1,83 @@
+{
+  "experiment_id": "AQM-20260731-086",
+  "task": "AQM086 - AgenticQwen B组 100K 公开数据来源归档",
+  "target_total_examples": 100000,
+  "existing_public_effective_examples": 37022,
+  "reasoning_public_examples": 0,
+  "agentic_public_examples": 0,
+  "flywheel_generated_examples": 0,
+  "total_training_eligible_so_far": 37022,
+  "remaining_to_target": 62978,
+  "eligible_breakdown": {
+    "hotpotqa_train": 0,
+    "hotpotqa_train_note": "download BLOCKED (source host unreachable); not eligible until obtained + sha256 verified",
+    "2wiki_train": 0,
+    "2wiki_train_note": "167454 records downloaded but dataset license UNCONFIRMED -> not eligible",
+    "omni_math": 0,
+    "omni_math_note": "4428 records downloaded but license UNCONFIRMED -> not eligible",
+    "synthagent": 0,
+    "synthagent_note": "CODE_ONLY; agentic data only on forbidden HF -> not eligible"
+  },
+  "status": "SOURCE_ARCHIVE_ONLY",
+  "training_allowed": false,
+  "license_review_complete": false,
+  "evaluation_leakage_check": false,
+  "evaluation_leakage_check_note": "train/dev/test splits separated where present (2wiki: train.json vs dev/test.json). dev/test and all evaluation-output files flagged evaluation_only. HotpotQA dev/test never downloaded.",
+  "source_manifests": [
+    "manifests/2wikimultihopqa.manifest.json",
+    "manifests/hotpotqa-train.manifest.json",
+    "manifests/omni-math.manifest.json",
+    "manifests/synthagent.manifest.json"
+  ],
+  "existing_public_data": {
+    "absolute_path": "/workspace/storage/datasets/derived/AQM-20260728-070-public/public-effective-37022.jsonl",
+    "record_count": 37022,
+    "source_rows": 37401,
+    "sha256": "a0a1578ead6303c92ab39a7ba24216dbe3046dfd29d5f79c8fd8e355d2b00ebe",
+    "deduplication": "none",
+    "source_manifest": "AQM-20260728-070",
+    "note": "Hosted on the bastion; NOT re-downloaded and NOT uploaded to GitHub (per AQM086 section 5). Path not reachable from this workstation; fields recorded from the AQM086 task spec."
+  },
+  "release": {
+    "tag": "AQM086-public-sources-r1",
+    "branch": "codex/aqm086-public-sources",
+    "release_name": "AQM086-public-sources-r1",
+    "status": "NOT_CREATED",
+    "reason": "No GitHub token / gh CLI in this environment, and the HotpotQA asset is not downloadable yet. Asset upload is pending a token.",
+    "planned_assets": [
+      {
+        "name": "AQM086-hotpotqa-hotpot_train_v1.1.json",
+        "size": "~566 MB",
+        "sha256": "26650cf50234ef5fb2e664ed70bbecdfd87815e6bffc257e068efea5cf7cd316 (expected, unverified)",
+        "status": "BLOCKED"
+      },
+      {
+        "name": "AQM086-2wiki-data_ids_april7.zip",
+        "size": 258968175,
+        "sha256": "95df2bf56fdabe034e27aebc580e02264232203cf52552f9efe8a919e5529eef",
+        "status": "READY_LOCALLY"
+      },
+      {
+        "name": "AQM086-omni-math-Omni-Math.jsonl",
+        "size": 7504961,
+        "sha256": "7c87be8ee41ac7c7a597ef5a5500e84bd2b639a85a06db3da7f69bf9a32ef168",
+        "status": "READY_LOCALLY"
+      }
+    ]
+  },
+  "acceptance": {
+    "all_repository_commits_recorded": true,
+    "all_data_sha256_recorded": true,
+    "all_byte_sizes_recorded": true,
+    "json_jsonl_zip_readable": true,
+    "zip_no_path_traversal": true,
+    "train_dev_test_separated": true,
+    "license_files_present": true,
+    "no_secrets_committed": true,
+    "git_branch": "codex/aqm086-public-sources",
+    "release_asset_url_accessible": false,
+    "release_asset_rehash_matches": false,
+    "release_asset_note": "Release not created yet (no token); these two checks pass only after the Release + assets are uploaded."
+  },
+  "notes": "AQM086 has NOT reached 100K. B-group training MUST NOT start. Blocked items: HotpotQA download (source unreachable), 2Wiki/Omni-MATH/SynthAgent license confirmation, GitHub Release creation (no token)."
+}
