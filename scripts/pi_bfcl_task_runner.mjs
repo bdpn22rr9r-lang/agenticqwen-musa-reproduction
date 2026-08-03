@@ -3,7 +3,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";
-import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
 import readline from "node:readline";
 
@@ -29,6 +28,14 @@ function textForTurn(turn) {
   }).join("\n");
 }
 
+function esmEntry(packageDirectory) {
+  const descriptor = JSON.parse(fs.readFileSync(path.join(packageDirectory, "package.json"), "utf8"));
+  const exported = descriptor.exports?.["."];
+  const entry = typeof exported === "string" ? exported : exported?.import ?? descriptor.main;
+  if (typeof entry !== "string") throw new Error(`ESM_ENTRY_NOT_FOUND: ${packageDirectory}`);
+  return pathToFileURL(path.resolve(packageDirectory, entry)).href;
+}
+
 const inputPath = value("--input");
 const outputPath = value("--output");
 const input = JSON.parse(fs.readFileSync(inputPath, "utf8"));
@@ -36,9 +43,9 @@ const app = process.env.PI_APP;
 const executor = process.env.PI_EXECUTOR_PY;
 if (!app || !executor) throw new Error("PI_APP and PI_EXECUTOR_PY are required");
 
-const requireFromPi = createRequire(path.join(app, "package.json"));
-const pi = await import(pathToFileURL(requireFromPi.resolve("@earendil-works/pi-coding-agent")).href);
-const typebox = await import(pathToFileURL(requireFromPi.resolve("typebox")).href);
+const piPackage = path.join(app, "node_modules", "@earendil-works", "pi-coding-agent");
+const pi = await import(esmEntry(piPackage));
+const typebox = await import(esmEntry(path.join(piPackage, "node_modules", "typebox")));
 const { createAgentSession, DefaultResourceLoader, ModelRuntime, SessionManager, SettingsManager, defineTool } = pi;
 const { Type } = typebox;
 
