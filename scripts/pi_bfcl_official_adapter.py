@@ -17,6 +17,10 @@ def rows(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def schema(value):
     if isinstance(value, dict):
         result = {key: schema(item) for key, item in value.items()}
@@ -91,7 +95,34 @@ def run(args):
     entries, answers = load(root, args.task_id, args.limit)
     raw, traces, results = (out / name for name in ("raw_events.jsonl", "tool_traces.jsonl", "task_results.jsonl"))
     runner = Path(args.runner)
+    if not runner.is_file():
+        raise FileNotFoundError(runner)
     node = args.node
+    data = root / "bfcl_eval" / "data"
+    source_inputs = [
+        data / f"BFCL_v4_multi_turn_{category}.json"
+        for category in ("base", "miss_func", "miss_param", "long_context")
+    ] + [
+        data / "possible_answer" / f"BFCL_v4_multi_turn_{category}.json"
+        for category in ("base", "miss_func", "miss_param", "long_context")
+    ] + sorted((data / "multi_turn_func_doc").glob("*.json"))
+    manifest = {
+        "benchmark": "BFCL-V4 Multi-turn",
+        "agent_runtime": "Pi 0.83.0",
+        "provider": args.provider,
+        "model": args.model,
+        "task_id": args.task_id,
+        "limit": args.limit,
+        "max_steps": args.max_steps,
+        "timeout_seconds": args.timeout_seconds,
+        "adapter_sha256": sha256(Path(__file__).resolve()),
+        "pi_task_runner_sha256": sha256(runner),
+        "source_inputs": [
+            {"path": str(path.relative_to(root)).replace("\\", "/"), "sha256": sha256(path)}
+            for path in source_inputs
+        ],
+    }
+    (out / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     environment = os.environ.copy()
     environment.update({"PI_APP": args.pi_app, "PI_MODELS": args.pi_models, "PI_AGENT_DIR": args.pi_agent_dir, "PI_AUTH": args.pi_auth, "PI_EXECUTOR_PY": str(Path(__file__).resolve())})
     passed = 0
@@ -115,10 +146,14 @@ def run(args):
         write_jsonl(results, {"id": entry["id"], "category": category, "valid": bool(checked.get("valid")), "checker": checked, "trajectory": decoded})
     scores = {"task_count": len(entries), "passed": passed, "valid_rate": passed / len(entries)}
     (out / "scores.json").write_text(json.dumps(scores, indent=2), encoding="utf-8")
-    (out / "COMPLETE").write_text("BFCL_PI_COMPLETE\n", encoding="utf-8")
-    for file in sorted(out.iterdir()):
-        if file.is_file():
-            print(hashlib.sha256(file.read_bytes()).hexdigest(), file.name)
+    (out / "summary.md").write_text(
+        f"# BFCL Pi Run\n\nmodel: {args.model}\ntasks: {len(entries)}\npassed: {passed}\nvalid_rate: {scores['valid_rate']:.6f}\n",
+        encoding="utf-8",
+    )
+    (out / "COMPLETE").write_text("COMPLETE=PASS\nbenchmark=BFCL_V4_MULTI_TURN\n", encoding="utf-8")
+    checksums = [f"{sha256(file)}  {file.name}" for file in sorted(out.iterdir()) if file.is_file() and file.name != "sha256sum.txt"]
+    (out / "sha256sum.txt").write_text("\n".join(checksums) + "\n", encoding="utf-8")
+    print("\n".join(checksums))
 
 
 def main():
@@ -134,7 +169,7 @@ def main():
     parser.add_argument("--max-steps", type=int, default=8)
     parser.add_argument("--timeout-seconds", type=int, default=180)
     parser.add_argument("--node", default="/workspace/qwen35/formal-bench/pi-runtime/node/bin/node")
-    parser.add_argument("--runner", default="/workspace/qwen35/formal-bench/pi-runtime/app/pi_bfcl_task_runner.mjs")
+    parser.add_argument("--runner", default=str(Path(__file__).with_name("pi_bfcl_task_runner.mjs")))
     parser.add_argument("--pi-app", default="/workspace/qwen35/formal-bench/pi-runtime/app")
     parser.add_argument("--pi-models", default="/workspace/qwen35/formal-bench/pi-runtime/home/.pi/agent/models.json")
     parser.add_argument("--pi-agent-dir", default="/workspace/qwen35/formal-bench/pi-runtime/home/.pi/agent")
