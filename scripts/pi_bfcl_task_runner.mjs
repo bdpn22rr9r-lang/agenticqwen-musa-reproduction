@@ -92,6 +92,8 @@ const tools = input.tools.map((tool) => defineTool({
   name: tool.function.name,
   label: tool.function.name,
   description: tool.function.description || "",
+  promptSnippet: `${tool.function.name}: ${tool.function.description || "BFCL task tool"}`,
+  promptGuidelines: [`Use ${tool.function.name} only when the BFCL task requires it; call the tool instead of describing the call.`],
   parameters: Type.Unsafe(tool.function.parameters),
   execute: async (_toolCallId, arguments_) => ({
     content: [{ type: "text", text: await execute(tool.function.name, arguments_) }], details: {},
@@ -114,8 +116,7 @@ const { session } = await createAgentSession({
   modelRuntime,
   thinkingLevel: "off",
   customTools: tools,
-  tools: tools.map((tool) => tool.name),
-  noTools: "builtin",
+  tools: [],
   resourceLoader: loader,
   sessionManager: SessionManager.inMemory(),
   settingsManager,
