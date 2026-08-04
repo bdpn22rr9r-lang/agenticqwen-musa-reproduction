@@ -116,7 +116,7 @@ const { session } = await createAgentSession({
   modelRuntime,
   thinkingLevel: "off",
   customTools: tools,
-  tools: [],
+  tools: tools.map((tool) => tool.name),
   resourceLoader: loader,
   sessionManager: SessionManager.inMemory(),
   settingsManager,
