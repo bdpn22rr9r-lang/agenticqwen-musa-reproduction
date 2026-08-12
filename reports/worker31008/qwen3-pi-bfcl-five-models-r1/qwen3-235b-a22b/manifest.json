@@ -1,0 +1,94 @@
+{
+  "benchmark": "BFCL-V4 Multi-turn",
+  "agent_runtime": "Pi 0.83.0",
+  "provider": "worker31008-qwen3-235b-a22b",
+  "model": "qwen3-235b-a22b",
+  "task_id": null,
+  "limit": null,
+  "max_steps": 8,
+  "timeout_seconds": 180,
+  "adapter_sha256": "31c39a792e23056d5d4a8aefcd1e7085c7daf3d50264bbd6260745ff239c7d35",
+  "pi_task_runner_sha256": "c3db2807e2a2fae7bedd78a94b085a789f07549e1f84f242de70b0685c784d6c",
+  "source_inputs": [
+    {
+      "path": "bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+      "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+    },
+    {
+      "path": "bfcl_eval/data/BFCL_v4_multi_turn_miss_func.json",
+      "sha256": "87d28ce10e37d864b72de85d5732eef2a867b241d6c1c99b4ae682c9e3ea921c"
+    },
+    {
+      "path": "bfcl_eval/data/BFCL_v4_multi_turn_miss_param.json",
+      "sha256": "f0c66dda3795f5f53e3e1c0cc8ba0246b6761c8f58bdba8317203bf451ab8838"
+    },
+    {
+      "path": "bfcl_eval/data/BFCL_v4_multi_turn_long_context.json",
+      "sha256": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324"
+    },
+    {
+      "path": "bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_base.json",
+      "sha256": "1fee67823b317571649177dd89d63969feaae4e810cc7448ee55ba797fb7c8fc"
+    },
+    {
+      "path": "bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_miss_func.json",
+      "sha256": "69e679b806d1c871b05393a4b95583bb973248e5b8d96c2d7f4ca05e29fc32e6"
+    },
+    {
+      "path": "bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_miss_param.json",
+      "sha256": "59c442901779e2c31c33abcd566d032e03736e5ad8069de2fe05489873046ecf"
+    },
+    {
+      "path": "bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_long_context.json",
+      "sha256": "e82aa0e839c39d23c64a05834f7ae024d7c9738ec21738ecee78dc876e3d0d18"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/gorilla_file_system.json",
+      "sha256": "c4c1b741c71e2a17c97a5dc9c4a91d89978c4eaece56494d14272d5df6c650e9"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/math_api.json",
+      "sha256": "83fa31708c89442bdcf12ac4dfbe3be8663ec9183a1b1524a9fda98164bc7e0b"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/memory_kv.json",
+      "sha256": "96480cd9cbd3d4a34cd8f78879bc6622731768a26e080f7a34782e36e3402287"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/memory_rec_sum.json",
+      "sha256": "4ceff946df00983c7f0b95d1b70ae402247f3312fb898bac9ecfa1de52f5a783"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/memory_vector.json",
+      "sha256": "917908ca99fdd01e203274b7ec6eb2347fa91d57f3c6341e20945cc9c9d746cf"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/message_api.json",
+      "sha256": "4d58ea933a5d2b280d7a52366617fb47fecd333d7b0e08e724db6fa12fb5f847"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/posting_api.json",
+      "sha256": "87f9fc404a06e4107d7c366f1399c596440e84c16cb119faf374b2f532d86e8b"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/ticket_api.json",
+      "sha256": "31324e0380782664fe82ba05bd23517808ad55692b45a5fe7c3d4d395fe4f0f8"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/trading_bot.json",
+      "sha256": "1a7933fd8f0cb8fbec38aeae05cb8c24132747cad4904fe1c13ac3d01fc22c2d"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/travel_booking.json",
+      "sha256": "f17b950c13adddf41d0848077df58788252e4c2e7cad5cfa71c8c4bf04f57b26"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/vehicle_control.json",
+      "sha256": "0c8a66292844874ef7b168f343bc394d8615d2d9e1f4387999a9ee23011eac78"
+    },
+    {
+      "path": "bfcl_eval/data/multi_turn_func_doc/web_search.json",
+      "sha256": "61fcee411e35f7ff67415e18cd67276615cf06e1c8841a683d2d997dbb46eac5"
+    }
+  ]
+}
