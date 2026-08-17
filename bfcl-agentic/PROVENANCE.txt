@@ -1,0 +1,37 @@
+BFCL V4 Agentic route artifacts (Pi agent + official BFCL backends)
+====================================================================
+
+Uploaded:  2026-08-17T13:28:49+08:00
+Source:    local engineering docs tree (not a git repo):
+           C:\Users\22475\Desktop\Codex_LongTerm_Workbench\projects\2026-07-09_model-training\agenticqwen-musa-reproduction
+Uploaded from repo: bdpn22rr9r-lang/agenticqwen-musa-reproduction
+Branch:    codex/bfcl-v4-runtime-adapter
+
+Contents & roles
+----------------
+configs/bfcl_v4_agentic_plan.json
+    Evaluation plan for BFCL V4 Agentic categories (official-v4-agentic):
+    665 tasks, overall_weight 0.4, category list (e.g. web_search_base, 100
+    tasks, BFCL_v4_web_search.json) mapped onto the official bfcl_eval/data
+    layout (data/, possible_answer/, memory_prereq_conversation/,
+    multi_turn_func_doc/).
+
+scripts/pi_bfcl_agentic_adapter.py
+    Python adapter: Pi agent loop driving the OFFICIAL BFCL package
+    (bfcl_eval.eval_checker.agentic_eval.agentic_checker and
+    multi_turn_utils.execute_multi_turn_func_call) with the official
+    Web Search / Memory backends. Scoring stays with the official checker.
+
+scripts/pi_bfcl_agentic_task_runner.mjs
+    Node task runner: executes one BFCL Agentic task end-to-end via the
+    adapter, including optional memory-prerequisite sessions.
+
+Integrity
+---------
+SHA-256 of the three files at upload time are in sha256sum.txt (same
+directory). The source tree is not a git repository; the hashes above are
+the frozen identity of these exact copies.
+
+Related engineering docs (not included here): worker31008 BFCL handoff
+series (19/21/22/23) and 28_QWEN3_PI_FOUR_EVALUATION_RESULTS.md in the
+source tree.

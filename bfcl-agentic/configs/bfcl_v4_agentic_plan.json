@@ -1,0 +1,95 @@
+{
+  "benchmark": "BFCL_V4_AGENTIC",
+  "version": "official-v4-agentic",
+  "total_tasks": 665,
+  "overall_weight": 0.4,
+  "source_layout": {
+    "data_dir": "bfcl_eval/data",
+    "possible_answer_dir": "bfcl_eval/data/possible_answer",
+    "memory_prereq_dir": "bfcl_eval/data/memory_prereq_conversation",
+    "function_doc_dir": "bfcl_eval/data/multi_turn_func_doc"
+  },
+  "categories": [
+    {
+      "id": "web_search_base",
+      "official_category": "Web Search",
+      "count": 100,
+      "task_file": "BFCL_v4_web_search.json",
+      "answer_file": "BFCL_v4_web_search.json",
+      "backend": "WebSearchAPI",
+      "show_snippet": true
+    },
+    {
+      "id": "web_search_no_snippet",
+      "official_category": "Web Search",
+      "count": 100,
+      "task_file": "BFCL_v4_web_search.json",
+      "answer_file": "BFCL_v4_web_search.json",
+      "backend": "WebSearchAPI",
+      "show_snippet": false
+    },
+    {
+      "id": "memory_kv",
+      "official_category": "Memory",
+      "count": 155,
+      "task_file": "BFCL_v4_memory.json",
+      "answer_file": "BFCL_v4_memory.json",
+      "backend": "MemoryAPI_kv",
+      "memory_backend": "kv"
+    },
+    {
+      "id": "memory_vector",
+      "official_category": "Memory",
+      "count": 155,
+      "task_file": "BFCL_v4_memory.json",
+      "answer_file": "BFCL_v4_memory.json",
+      "backend": "MemoryAPI_vector",
+      "memory_backend": "vector"
+    },
+    {
+      "id": "memory_rec_sum",
+      "official_category": "Memory",
+      "count": 155,
+      "task_file": "BFCL_v4_memory.json",
+      "answer_file": "BFCL_v4_memory.json",
+      "backend": "MemoryAPI_rec_sum",
+      "memory_backend": "recursive_summary"
+    }
+  ],
+  "models": {
+    "qwen3": [
+      "Qwen3-8B-BF16",
+      "Qwen3-14B-BF16",
+      "Qwen3-30B-A3B-BF16",
+      "Qwen3-32B-BF16",
+      "Qwen3-235B-A22B-FP8"
+    ],
+    "qwen3_5": [
+      "Qwen3.5-0.8B-BF16",
+      "Qwen3.5-2B-BF16",
+      "Qwen3.5-4B-BF16",
+      "Qwen3.5-9B-BF16",
+      "Qwen3.5-27B-BF16",
+      "Qwen3.5-35B-A3B-BF16"
+    ]
+  },
+  "protocol": {
+    "thinking": "disabled",
+    "temperature": 0,
+    "tool_choice": "auto",
+    "max_steps_per_turn": 8,
+    "max_steps_per_task": 1024,
+    "timeout_seconds": 180,
+    "no_retry_after_provider_failure": true,
+    "specialized_checker": "bfcl_eval.eval_checker.agentic_eval.agentic_checker.agentic_checker",
+    "web_search_requires_serpapi_key": true,
+    "memory_vector_requires_all_minilm_l6_v2_and_faiss": true,
+    "memory_prerequisite_conversations_required": true
+  },
+  "status": {
+    "implementation": "READY_FOR_REMOTE_SOURCE_FREEZE",
+    "source_data": "NOT_FROZEN_ON_LOCAL_WORKSPACE",
+    "remote_execution": "NOT_STARTED",
+    "overall_score": "NOT_AVAILABLE"
+  }
+}
